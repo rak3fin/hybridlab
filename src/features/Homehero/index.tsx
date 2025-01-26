@@ -34,7 +34,7 @@ export default function Homehero() {
           The Key to your next level of training found in one app.
         </p>
         <Link
-          href="#"
+          href="#membership"
           className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat"
         >
           GET STARTED NOW

@@ -58,7 +58,7 @@ export default function ContactUs() {
               name=""
               id=""
               className="text-white/60 text-base tracking-[0.02em] border border-white/30 px-6 py-4 bg-white/10 w-full"
-              placeholder="Message"
+              placeholder="Write Your Message Here"
               rows={7}
             ></textarea>
             <button
