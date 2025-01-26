@@ -40,11 +40,11 @@ export default function ContactUs() {
             </div>
             <div className="flex flex-col lg:flex-row gap-4">
               <input
-                type="text"
+                type="tel"
                 name=""
                 id=""
                 className="text-white/60 text-base tracking-[0.02em] border border-white/30 px-6 py-4 bg-white/10 w-full"
-                placeholder="First Name"
+                placeholder="Phone No"
               />
               <input
                 type="tel"
