@@ -9,7 +9,7 @@ export default function ProgramDescription() {
           alt="programs"
           width={762}
           height={500}
-          className="w-[24.87rem] lg:w-[47.63rem]"
+          className="w-[24.87rem] lg:w-[47.63rem] shrink-0"
         />
         <div className="flex flex-col gap-4 lg:self-center">
           <h2 className="font-semibold text-xl font-pilat text-white text-center lg:text-left">
@@ -40,7 +40,7 @@ export default function ProgramDescription() {
           alt="programs"
           width={762}
           height={500}
-          className="w-[24.87rem] lg:w-[47.63rem]"
+          className="w-[24.87rem] lg:w-[47.63rem] shrink-0"
         />
       </div>
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">
@@ -49,7 +49,7 @@ export default function ProgramDescription() {
           alt="programs"
           width={762}
           height={500}
-          className="w-[24.87rem] lg:w-[47.63rem]"
+          className="w-[24.87rem] lg:w-[47.63rem] shrink-0"
         />
         <div className="flex flex-col gap-4 lg:self-center">
           <h2 className="font-semibold text-xl font-pilat text-white text-center lg:text-left">
