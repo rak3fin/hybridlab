@@ -25,14 +25,14 @@ export default function Calculator({
           min: 4.5,
           max: 6.5,
           step: 0.5,
-          onValueChange: (e: Number[]) => setHeight(e[0].toString()),
+          onValueChange: (e: number[]) => setHeight(e[0].toString()),
         }
       : {
           value: [Number(height)],
           min: 137,
           max: 198,
           step: 1,
-          onValueChange: (e: Number[]) => setHeight(e[0].toString()),
+          onValueChange: (e: number[]) => setHeight(e[0].toString()),
         };
 
   const handelSubmit = () => {

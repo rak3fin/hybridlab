@@ -28,6 +28,14 @@ const pilat = localFont({
 export const metadata: Metadata = {
   title: "Hybrid Lab",
   description: "Designed and Developed by Appifinity",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Hybrid Lab",
+    description: "Designed and Developed by Appifinity",
+    images: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
