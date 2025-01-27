@@ -15,7 +15,7 @@ export default function Homehero() {
         <h3 className="font-black tracking-[0.04em] text-base md:text-2xl xl:text-4xl text-white">
           BECOME A
         </h3>
-        <h1 className="text-site-main-color font-black text-3xl md:text-5xl xl:text-7xl font-pilat text-center lg:text-left">
+        <h1 className="text-site-main-color font-bold text-3xl md:text-5xl font-pilat text-center lg:text-left">
           HYBRID ATHLETE
         </h1>
         <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
@@ -35,7 +35,7 @@ export default function Homehero() {
         </p>
         <Link
           href="#membership"
-          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           GET STARTED NOW
         </Link>

@@ -23,12 +23,12 @@ export default function SubBanner({
         <h3 className="text-white text-base lg:text-2xl tracking-[0.04em] inline-flex gap-2 capitalize">
           <Link href="/">home</Link> / <span className="font-bold">{path}</span>
         </h3>
-        <h1 className="font-pilat text-white font-black text-3xl lg:text-7xl tracking-[0.04em]">
+        <h1 className="font-pilat text-white font-bold text-3xl lg:text-7xl tracking-[0.04em]">
           {heading}
         </h1>
         <Link
           href={btnPath}
-          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat"
+          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           {btnLabel}
         </Link>

@@ -2,12 +2,16 @@
 import CustomHeader from "@/components/ui/header";
 import { Switch } from "@/components/ui/switch";
 import { Check } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ChoosePlan() {
   const [annually, setAnnually] = useState<boolean>(false);
   return (
-    <section className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col lg:flex-row items-center gap-12" id="membership">
+    <section
+      className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col lg:flex-row items-center gap-12"
+      id="membership"
+    >
       <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8">
         <CustomHeader whiteHeading="CHOOSE YOUR" colourHeading="PLAN" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
@@ -25,6 +29,12 @@ export default function ChoosePlan() {
           rewarding as possible. With our Gold Membership, your commitment to
           health and fitness becomes more effortless than ever.
         </p>
+        <Link
+          href="/contact-us"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat uppercase transition-transform hover:scale-[1.05] duration-300"
+        >
+          get in touch
+        </Link>
       </div>
       <div className="bg-site-main-color px-6 py-5 gap-6 flex flex-col items-center w-full lg:max-w-md">
         <h1 className="text-lg lg:text-2xl font-bold text-center tracking-[0.02em] text-[#181818] font-pilat uppercase">
@@ -70,7 +80,7 @@ export default function ChoosePlan() {
         </div>
         <button
           type="button"
-          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat"
+          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           Enroll Now
         </button>

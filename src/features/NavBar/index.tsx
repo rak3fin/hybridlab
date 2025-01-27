@@ -48,8 +48,8 @@ export default function NavBar({
             <div className="flex flex-col gap-10 items-center font-semibold text-lg font-pilat">
               <Link
                 href="/"
-                className={`${
-                  isActiveRoute("/") ? "underline" : "no-underline"
+                className={`pb-1 hover:border-b-2 border-black  ${
+                  isActiveRoute("/") ? "border-b-2" : "border-0"
                 }`}
               >
                 Home
@@ -87,33 +87,33 @@ export default function NavBar({
       <div className="hidden md:flex gap-14 font-pilat font-semibold">
         <Link
           href="/"
-          className={`${
-            isActiveRoute("/") ? "underline" : "no-underline"
-          } hover:underline`}
+          className={`pb-1 hover:border-b-2 border-black  ${
+            isActiveRoute("/") ? "border-b-2" : "border-0"
+          }`}
         >
           Home
         </Link>
         <Link
           href="/online-program"
-          className={`${
-            isActiveRoute("/online-program") ? "underline" : "no-underline"
-          } hover:underline`}
+          className={`pb-1 hover:border-b-2 border-black  ${
+            isActiveRoute("/online-program") ? "border-b-2" : "border-0"
+          }`}
         >
           Online Programs
         </Link>
         <Link
           href="/about"
-          className={`${
-            isActiveRoute("/about") ? "underline" : "no-underline"
-          } hover:underline`}
+          className={`pb-1 hover:border-b-2 border-black  ${
+            isActiveRoute("/about") ? "border-b-2" : "border-0"
+          }`}
         >
           About Us
         </Link>
         <Link
           href="/contact-us"
-          className={`${
-            isActiveRoute("/contact-us") ? "underline" : "no-underline"
-          } hover:underline`}
+          className={`pb-1 hover:border-b-2 border-black  ${
+            isActiveRoute("/contact-us") ? "border-b-2" : "border-0"
+          }`}
         >
           Contact Us
         </Link>

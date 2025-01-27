@@ -13,7 +13,7 @@ import { IoMdMail } from "react-icons/io";
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-[#292929] px-4 md:px-14 xl:px-28 py-7 lg:py-14">
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-8 xl:gap-12 mb-14">
+      <div className="flex flex-col lg:flex-row lg:justify-between gap-5 md:gap-8 xl:gap-24 mb-14">
         <div className="flex flex-col gap-4 flex-1">
           <Link href="/" className="">
             <Image
@@ -51,7 +51,7 @@ export default function Footer() {
               <Link href="/online-program">ONLINE PROGRAMS</Link>
             </li>
             <li className="inline-flex gap-1 items-center text-white text-base uppercase">
-              <Link href="/about-us">ABOUT US</Link>
+              <Link href="/about">ABOUT US</Link>
             </li>
             <li className="inline-flex gap-1 items-center text-white text-base uppercase">
               <Link href="/contact-us">CONTACT US</Link>

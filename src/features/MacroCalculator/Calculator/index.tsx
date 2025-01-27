@@ -9,7 +9,7 @@ export default function Calculator() {
   const [gender, setGender] = useState<string>("male");
   const [heightType, setHeightType] = useState<string>("feet");
   const [weightType, setWeightType] = useState<string>("kg");
-  const [height, setHeight] = useState<string>("5");
+  const [height, setHeight] = useState<string>("4.5");
   const [weight, setWeight] = useState<string>("60");
   const [fillUpComplete, setFillUpComplete] = useState<boolean>(false);
 
@@ -48,7 +48,7 @@ export default function Calculator() {
           </div>
           <button
             type="button"
-            className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 self-center font-pilat inline-flex gap-4 uppercase"
+            className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 self-center font-pilat inline-flex gap-4 uppercase transition-transform hover:scale-[1.05] duration-300"
           >
             Submit
           </button>
@@ -56,7 +56,7 @@ export default function Calculator() {
       ) : (
         <>
           <h1 className="text-white font-semibold text-2xl text-center font-pilat uppercase">
-            MACRO CALCULTOR
+            MACRO CALCULATOR
           </h1>
           <ToggleGroup type="single" value={gender} onValueChange={setGender}>
             <ToggleGroupItem
@@ -114,8 +114,9 @@ export default function Calculator() {
             <Slider
               className=""
               value={[Number(height)]}
-              min={5}
-              max={8}
+              min={4.5}
+              max={6.5}
+              step={0.5}
               onValueChange={(e) => setHeight(e[0].toString())}
             />
           </div>

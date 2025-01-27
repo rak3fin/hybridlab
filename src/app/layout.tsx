@@ -11,11 +11,6 @@ const open_sans = Open_Sans({
 const pilat = localFont({
   src: [
     {
-      path: "../assets/PilatExtended-Black.ttf",
-      weight: "900",
-      style: "normal",
-    },
-    {
       path: "../assets/PilatExtended-Bold.ttf",
       weight: "700",
       style: "normal",

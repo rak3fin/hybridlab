@@ -12,7 +12,7 @@ export default function ProgramDescription() {
           className="w-[24.87rem] lg:w-[47.63rem] shrink-0"
         />
         <div className="flex flex-col gap-4 lg:self-center">
-          <h2 className="font-semibold text-xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-semibold text-xl lg:text-3xl font-pilat text-white text-center lg:text-left">
             Comprehensive Support Included
           </h2>
           <p className="text-base text-white/80 text-center lg:text-left">
@@ -25,7 +25,7 @@ export default function ProgramDescription() {
       </div>
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">
         <div className="flex flex-col gap-4 lg:self-center">
-          <h2 className="font-semibold text-xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-semibold text-xl lg:text-3xl font-pilat text-white text-center lg:text-left">
             Program Structure
           </h2>
           <p className="text-base text-white/80 text-center lg:text-left">
@@ -52,7 +52,7 @@ export default function ProgramDescription() {
           className="w-[24.87rem] lg:w-[47.63rem] shrink-0"
         />
         <div className="flex flex-col gap-4 lg:self-center">
-          <h2 className="font-semibold text-xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-semibold text-xl lg:text-3xl font-pilat text-white text-center lg:text-left">
             Training Tailored to Your Environment
           </h2>
           <p className="text-base text-white/80 text-center lg:text-left">

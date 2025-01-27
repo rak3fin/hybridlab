@@ -32,9 +32,9 @@ export default function EverythingYouNeed() {
           alt="everything-you-need"
           width={719}
           height={719}
-          className="mb-4 lg:mb-0 lg:w-[37.44vmax]"
+          className="mb-4 lg:mb-0 lg:w-[37.44vmax] shrink-0"
         />
-        <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-14">
+        <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-14 shrink">
           {membershipDetails.map((item) => (
             <div
               className="flex flex-col gap-2 items-center lg:items-stretch"
@@ -51,7 +51,7 @@ export default function EverythingYouNeed() {
           ))}
           <Link
             href="#membership"
-            className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat"
+            className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
           >
             JOIN MEMBERSHIP
           </Link>

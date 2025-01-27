@@ -43,7 +43,7 @@ export default function OnlinePrograms({
     },
   ];
   return (
-    <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 items-center gap-7 lg:gap-12">
+    <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 lg:gap-12">
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
         {onlineProgarms.map((program) => (
@@ -69,7 +69,7 @@ export default function OnlinePrograms({
       {showMore && (
         <Link
           href="/online-program"
-          className="border border-white inline-flex items-center gap-2 text-white font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 font-pilat"
+          className="border border-white inline-flex items-center gap-2 text-white font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           View All <MoveRight />
         </Link>

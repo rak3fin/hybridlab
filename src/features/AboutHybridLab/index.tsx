@@ -8,7 +8,7 @@ export default function AboutHybridLab() {
       id="about-us"
     >
       <CustomHeader
-        whiteHeading="Hybrid Lab: Redefining Athletic Training for the"
+        whiteHeading="Hybrid Lab: Redefining Athletic Training For The"
         colourHeading="Modern Athlete"
       />
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">

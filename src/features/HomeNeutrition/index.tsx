@@ -36,7 +36,7 @@ export default function HomeNeutrition() {
     },
     {
       id: 2,
-      title: "waldrof chicken salad",
+      title: "Salmon & Peach Salad",
       cover: {
         src: "/nutrition/waldrof-chicken-salad-2.png",
         alt: "waldrof-chicken-salad",
@@ -126,7 +126,7 @@ export default function HomeNeutrition() {
     },
   ];
   return (
-    <section className="bg-[url('/custom-bg/neutrition-bg.png')] bg-cover bg-no-repeat flex flex-col px-4 md:px-14 xl:px-28 py-7 items-center gap-7 lg:gap-12">
+    <section className="bg-[url('/custom-bg/neutrition-bg.png')] bg-cover bg-no-repeat flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-16 items-center gap-7 lg:gap-12">
       <div className="flex flex-col items-center gap-3">
         <h1 className="font-bold text-2xl lg:text-4xl text-center lg:text-left text-black tracking-[0.04em] font-pilat uppercase">
           nutrition done right for you
@@ -140,7 +140,7 @@ export default function HomeNeutrition() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
         {nutrition.map((item) => (
           <div
-            className="bg-white flex flex-col gap-5 px-6 shadow-[0px_4px_23.1px_0px_#00000026] relative"
+            className="bg-white flex flex-col gap-5 p-6 shadow-[0px_4px_23.1px_0px_#00000026] relative"
             key={item.id}
           >
             <Image
@@ -171,7 +171,7 @@ export default function HomeNeutrition() {
       </div>
       <Link
         href="#"
-        className="border border-[#181818] inline-flex items-center gap-2 text-[#181818] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 font-pilat tracking-[0.02em]"
+        className="border border-[#181818] inline-flex items-center gap-2 text-[#181818] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 font-pilat tracking-[0.02em] transition-transform hover:scale-[1.05] duration-300"
       >
         Show more <ChevronDown />
       </Link>

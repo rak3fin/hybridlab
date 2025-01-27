@@ -5,7 +5,7 @@ export default function ContactUs() {
   return (
     <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col items-center lg:gap-12">
       <CustomHeader whiteHeading="CONTACT" colourHeading="US" />
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 mt-6">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-24 mt-6">
         <Image
           src="/extra/contact-us-cover.png"
           alt="contact-us"
@@ -63,7 +63,7 @@ export default function ContactUs() {
             ></textarea>
             <button
               type="button"
-              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat"
+              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-4 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
             >
               SUBMIT
             </button>

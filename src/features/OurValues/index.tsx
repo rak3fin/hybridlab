@@ -5,7 +5,7 @@ export default function OurValues() {
   return (
     <div className="bg-[url('/custom-bg/about-value-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 pt-12 flex flex-col lg:flex-row items-center justify-between">
       <div className="flex flex-col gap-5 mb-7 lg:mb-40 lg:max-w-3xl">
-        <CustomHeader whiteHeading="OUR VALUES" colourHeading="IN ACTIONS" />
+        <CustomHeader whiteHeading="OUR VALUES" colourHeading="IN ACTION" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/70">
           Hybrid Lab represents the spirit of versatility and inclusivity in the
           fitness world. We are a diverse team of fitness experts,

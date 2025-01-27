@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OurJourney() {
   return (
-    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center justify-between gap-7 lg:gap-28">
+    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center justify-center gap-7 lg:gap-28">
       <Image
         src="/extra/our-journey-cover.png"
         alt="VALUES IN ACTIONS"

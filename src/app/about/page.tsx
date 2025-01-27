@@ -19,8 +19,8 @@ export default function About() {
       <AboutHybridLab />
       <OurJourney />
       <OurValues />
-      <ChoosePlan />
       <AboutVideo />
+      <ChoosePlan />
     </MainWebTemplate>
   );
 }
