@@ -18,7 +18,13 @@ export default function SubBanner({
 }) {
   return (
     <section className="flex relative">
-      <Image src={img} alt="banner" width={1920} height={573} />
+      <Image
+        src={img}
+        alt="banner"
+        width={1920}
+        height={573}
+        className="h-64 lg:h-auto object-cover"
+      />
       <div className="bg-[linear-gradient(90deg,_#000000_-10.93%,_rgba(0,_0,_0,_0)_100%)] absolute w-full h-full flex flex-col ps-4 lg:ps-32 justify-center gap-2 lg:gap-5">
         <h3 className="text-white text-base lg:text-2xl tracking-[0.04em] inline-flex gap-2 capitalize">
           <Link href="/">home</Link> / <span className="font-bold">{path}</span>

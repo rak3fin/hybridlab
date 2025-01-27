@@ -27,10 +27,10 @@ export default function AboutVideo() {
         </h1>
         <p className="text-base text-white/80 text-center lg:text-xl">
           Imagine combining the power of weightlifting with the endurance of
-          running in a single workout routine. That&apos;s hybrid training—it blends
-          strength and cardiovascular exercises to give you the best of both
-          worlds. By mixing up your workout, you&apos;re not just focusing on
-          one type of exercise, so you reduce the chance of getting bored or
+          running in a single workout routine. That&apos;s hybrid training—it
+          blends strength and cardiovascular exercises to give you the best of
+          both worlds. By mixing up your workout, you&apos;re not just focusing
+          on one type of exercise, so you reduce the chance of getting bored or
           injuring yourself from doing the same thing over and over.
         </p>
       </div>
@@ -64,7 +64,7 @@ export default function AboutVideo() {
             )
           )}
         </div>
-        <p className="text-base text-white text-center lg:text-xl">
+        <p className="text-base text-white text-center lg:text-xl max-w-[90ch] self-center">
           In essence, hybrid training is about being versatile—keeping your body
           guessing and your mind engaged. It&apos;s ideal for anyone who wants
           to get fit, stay healthy, and have fun doing it.

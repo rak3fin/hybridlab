@@ -63,7 +63,7 @@ export default function ContactUs() {
             ></textarea>
             <button
               type="button"
-              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-4 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
+              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-4 px-6 lg:px-7 self-center lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
             >
               SUBMIT
             </button>

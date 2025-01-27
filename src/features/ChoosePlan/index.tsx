@@ -31,7 +31,7 @@ export default function ChoosePlan() {
         </p>
         <Link
           href="/contact-us"
-          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat uppercase transition-transform hover:scale-[1.05] duration-300"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-center lg:self-start font-pilat uppercase transition-transform hover:scale-[1.05] duration-300"
         >
           get in touch
         </Link>

@@ -8,7 +8,7 @@ export default function Contactus() {
     <MainWebTemplate>
       <SubBanner
         img="/banner/contact-us.png"
-        path="CONTACT US"
+        path="Contact Us"
         heading="CONTACT US"
         btnLabel="Know More"
         btnPath="#lets-talk"

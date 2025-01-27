@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const open_sans = Open_Sans({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
         className={`${open_sans.variable} ${pilat.variable} antialiased font-open-sans bg-[#181818] scroll-smooth`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

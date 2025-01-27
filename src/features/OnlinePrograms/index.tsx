@@ -51,13 +51,15 @@ export default function OnlinePrograms({
             className="flex items-center justify-center relative"
             key={program.id}
           >
-            <Image
-              src={program.cover.src}
-              alt={program.cover.alt}
-              width={400}
-              height={624}
-              className="w-[25rem] lg:w-[20.8vmax]"
-            />
+            <div className="overflow-hidden">
+              <Image
+                src={program.cover.src}
+                alt={program.cover.alt}
+                width={400}
+                height={624}
+                className="w-[25rem] lg:w-[20.8vmax] transition-transform hover:scale-110 duration-500"
+              />
+            </div>
             <div className="absolute bottom-0 left-0 w-full flex flex-col items-center py-14 bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.75)_89.9%)]">
               <h1 className="text-white font-semibold text-center text-xl uppercase font-pilat">
                 {program.title}

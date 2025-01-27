@@ -1,17 +1,47 @@
 "use client";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { toast } from "@/hooks/use-toast";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { useState } from "react";
 import { IoMdFemale, IoMdMale } from "react-icons/io";
 
-export default function Calculator() {
+export default function Calculator({
+  handelClose,
+}: {
+  handelClose: () => void;
+}) {
   const [gender, setGender] = useState<string>("male");
   const [heightType, setHeightType] = useState<string>("feet");
   const [weightType, setWeightType] = useState<string>("kg");
   const [height, setHeight] = useState<string>("4.5");
   const [weight, setWeight] = useState<string>("60");
   const [fillUpComplete, setFillUpComplete] = useState<boolean>(false);
+
+  const heightSlider =
+    heightType === "feet"
+      ? {
+          value: [Number(height)],
+          min: 4.5,
+          max: 6.5,
+          step: 0.5,
+          onValueChange: (e: Number[]) => setHeight(e[0].toString()),
+        }
+      : {
+          value: [Number(height)],
+          min: 137,
+          max: 198,
+          step: 1,
+          onValueChange: (e: Number[]) => setHeight(e[0].toString()),
+        };
+
+  const handelSubmit = () => {
+    handelClose();
+    toast({
+      title: "Your form has been submitted",
+      description: "You will receive an email from us ASAP.",
+    });
+  };
 
   return (
     <div className="flex flex-col gap-10">
@@ -48,6 +78,7 @@ export default function Calculator() {
           </div>
           <button
             type="button"
+            onClick={handelSubmit}
             className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 self-center font-pilat inline-flex gap-4 uppercase transition-transform hover:scale-[1.05] duration-300"
           >
             Submit
@@ -111,14 +142,7 @@ export default function Calculator() {
                 />
               </div>
             </div>
-            <Slider
-              className=""
-              value={[Number(height)]}
-              min={4.5}
-              max={6.5}
-              step={0.5}
-              onValueChange={(e) => setHeight(e[0].toString())}
-            />
+            <Slider {...heightSlider} />
           </div>
           <div className="flex flex-col gap-6">
             <div className="flex justify-between items-center">

@@ -19,9 +19,9 @@ export default function ProgramContactBanner() {
           </p>
           <Link
             href="/contact-us"
-            className="px-6 py-3 text-[#1E1E1E] font-bold font-pilat text-xs lg:text-lg lg:tracking-[0.02em] bg-white lg:self-start transition-transform hover:scale-[1.05] duration-300"
+            className="px-6 py-3 text-[#1E1E1E] font-bold font-pilat text-xs lg:text-lg lg:tracking-[0.02em] bg-white lg:self-start transition-transform hover:scale-[1.05] duration-300 uppercase"
           >
-            Contact Us
+            Join Us
           </Link>
         </div>
         <Image
