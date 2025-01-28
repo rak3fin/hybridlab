@@ -33,7 +33,7 @@ export default function MacroCalculator() {
           FIND OUT YOUR DAILY MACRO TARGETS
         </h4>
         <Dialog open={openCalculator} onOpenChange={setOpenCalculator}>
-          <DialogTrigger className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300">
+          <DialogTrigger className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300 mt-4 lg:mt-5">
             CALCULATE
           </DialogTrigger>
           <DialogContent className="bg-[#383838] border-none outline-none">

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function OurValues() {
   return (
     <div className="bg-[url('/custom-bg/about-value-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 pt-12 flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-24">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 shrink">
         <CustomHeader whiteHeading="OUR VALUES" colourHeading="IN ACTION" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/70">
           Hybrid Lab represents the spirit of versatility and inclusivity in the

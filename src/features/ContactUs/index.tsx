@@ -1,7 +1,15 @@
+"use client";
 import CustomHeader from "@/components/ui/header";
+import { toast } from "@/hooks/use-toast";
 import Image from "next/image";
 
 export default function ContactUs() {
+  const handelSubmit = () => {
+    toast({
+      title: "Your query has been submitted",
+      description: "Our team will get back to you ASAP",
+    });
+  };
   return (
     <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col items-center lg:gap-12">
       <CustomHeader whiteHeading="CONTACT" colourHeading="US" />
@@ -63,6 +71,7 @@ export default function ContactUs() {
             ></textarea>
             <button
               type="button"
+              onClick={handelSubmit}
               className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-4 px-6 lg:px-7 self-center lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
             >
               SUBMIT

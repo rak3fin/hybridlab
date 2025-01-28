@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
@@ -33,12 +34,15 @@ export default function ContactDetails() {
             Hybrid Lab HQ - 7/49 Leda Drive, Burleigh heads, Qld, 4220
           </span>
         </div>
-        <div className="inline-flex gap-2 text-white/90 text-base lg:text-2xl">
+        <Link
+          href="mailTo:admin@hybridlab.com.au"
+          className="inline-flex gap-2 text-white/90 text-base lg:text-2xl"
+        >
           <span className="flex items-center justify-center border rounded-full p-4 border-white">
             <IoMdMail />
           </span>
           <span className="self-center">admin@hybridlab.com.au</span>
-        </div>
+        </Link>
       </div>
     </section>
   );

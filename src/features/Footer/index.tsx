@@ -34,10 +34,13 @@ export default function Footer() {
               Hybrid Lab HQ - 7/49 Leda Drive, Burleigh heads, Qld, 4220
             </span>
           </div>
-          <div className="inline-flex gap-1 items-center text-white text-sm">
+          <Link
+            href="mailTo:admin@hybridlab.com.au"
+            className="inline-flex gap-1 items-center text-white text-sm"
+          >
             <IoMdMail />
             <span>admin@hybridlab.com.au</span>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="font-bold font-pilat text-white text-lg">
@@ -92,9 +95,12 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-full bg-white h-0.5"></div>
-      <div className="flex items-center justify-center mt-2 lg:mt-4">
+      <div className="flex items-center justify-between mt-2 lg:mt-4">
         <h1 className="text-white font-light text-sm">
           &copy; 2024 Hybrid Lab. All rights reserved
+        </h1>
+        <h1 className="text-white font-light text-sm">
+          Proudly Designed &amp; Developed by Appifinity
         </h1>
       </div>
     </footer>
