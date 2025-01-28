@@ -61,7 +61,7 @@ export default function OnlinePrograms({
               />
             </div>
             <div className="absolute bottom-0 left-0 w-full flex flex-col items-center py-14 bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.75)_89.9%)]">
-              <h1 className="text-white font-semibold text-center text-xl uppercase font-pilat">
+              <h1 className="text-white font-semibold text-center text-xl uppercase font-pilat max-w-[10ch]">
                 {program.title}
               </h1>
             </div>
