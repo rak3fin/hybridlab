@@ -12,7 +12,7 @@ export default function OnlinePrograms() {
         img="/banner/online-program.png"
         path="Online Programs"
         heading="Online Programs"
-        btnLabel="EXPLORE NOW"
+        btnLabel="Explore Now"
         btnPath="#online-training"
       />
       <OnlineTrainingDescription />
