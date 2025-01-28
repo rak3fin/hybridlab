@@ -32,7 +32,7 @@ export default function AboutHybridLab() {
           alt="programs"
           width={762}
           height={500}
-          className="w-[24.87rem] xl:w-4/6"
+          className="w-[24.87rem] lg:w-[39.68vmax]"
         />
       </div>
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 lg:gap-12">
@@ -41,7 +41,7 @@ export default function AboutHybridLab() {
           alt="about"
           width={762}
           height={500}
-          className="w-[24.87rem] xl:w-4/6"
+          className="w-[24.87rem] lg:w-[39.68vmax]"
         />
         <div className="flex flex-col gap-4 lg:self-center lg:w-4/12">
           <h2 className="font-bold text-lg lg:text-3xl font-pilat text-white text-center lg:text-left">

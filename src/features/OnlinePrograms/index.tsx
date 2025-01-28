@@ -45,7 +45,7 @@ export default function OnlinePrograms({
   return (
     <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 lg:gap-12">
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-between">
         {onlineProgarms.map((program) => (
           <div
             className="flex items-center justify-center relative"
