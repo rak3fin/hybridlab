@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OurJourney() {
   return (
-    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-7 lg:gap-14">
+    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-center justify-center gap-7 lg:gap-14">
       <div className="flex flex-col lg:flex-row gap-5">
         <Image
           src="/extra/our-journey-cover.png"
@@ -27,7 +27,7 @@ export default function OurJourney() {
           className="w-80 lg:w-[35rem]"
         /> */}
       </div>
-      <div className="flex flex-col gap-5 lg:max-w-3xl self-center">
+      <div className="flex flex-col gap-5 self-center lg:max-w-xl">
         <CustomHeader whiteHeading="DISCOVER" colourHeading="OUR JOURNEY" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
           Hybrid Lab represents the spirit of versatility and inclusivity in the
