@@ -45,6 +45,7 @@ export default function Calculator({
 
   return (
     <div className="flex flex-col gap-10">
+      
       {fillUpComplete ? (
         <>
           <div className="flex gap-6">

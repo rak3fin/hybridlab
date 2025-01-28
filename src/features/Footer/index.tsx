@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="font-bold font-pilat text-white text-lg">
-            SOCIAL LINK
+            SOCIAL LINKS
           </h2>
           <ul className="flex gap-2">
             <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
@@ -97,7 +97,7 @@ export default function Footer() {
       <div className="w-full bg-white h-0.5"></div>
       <div className="flex items-center justify-between mt-2 lg:mt-4">
         <h1 className="text-white font-light text-sm">
-          &copy; 2024 Hybrid Lab. All rights reserved
+          &copy; 2025 Hybrid Lab. All rights reserved
         </h1>
         <h1 className="text-white font-light text-sm">
           Proudly Designed &amp; Developed by Appifinity
