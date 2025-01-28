@@ -5,11 +5,11 @@ export default function ProgramDescription() {
     <section className="flex flex-col gap-6 px-4 md:px-14 xl:px-28 py-7 lg:py-24">
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">
         <Image
-          src="/placeholder/program-placeholder.png"
+          src="/online-programs/program-1.png"
           alt="programs"
           width={762}
           height={500}
-          className="w-[24.87rem] xl:w-[47.63rem] shrink-0"
+          className="w-[24.87rem] xl:w-[47.63rem]"
         />
         <div className="flex flex-col gap-4 lg:self-center">
           <h2 className="font-semibold text-xl lg:text-3xl font-pilat text-white text-center lg:text-left">
@@ -36,7 +36,7 @@ export default function ProgramDescription() {
           </p>
         </div>
         <Image
-          src="/placeholder/program-placeholder.png"
+          src="/online-programs/program-2.png"
           alt="programs"
           width={762}
           height={500}
@@ -45,7 +45,7 @@ export default function ProgramDescription() {
       </div>
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">
         <Image
-          src="/placeholder/program-placeholder.png"
+          src="/online-programs/program-3.png"
           alt="programs"
           width={762}
           height={500}

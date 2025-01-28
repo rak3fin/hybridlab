@@ -45,7 +45,7 @@ export default function NavBar({
             <SheetHeader>
               <SheetTitle></SheetTitle>
             </SheetHeader>
-            <div className="flex flex-col gap-10 items-center font-semibold text-lg font-pilat">
+            <div className="flex flex-col gap-10 items-center font-semibold text-lg font-pilat relative h-full">
               <Link
                 href="/"
                 className={`pb-1 hover:border-b-2 border-black ${
@@ -78,6 +78,13 @@ export default function NavBar({
               >
                 Contact Us
               </Link>
+              <Image
+                src={"/extra/nav-symbol.svg"}
+                alt="shape"
+                width={227}
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[100]"
+                height={162}
+              />
             </div>
           </SheetContent>
         </Sheet>

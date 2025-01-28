@@ -13,7 +13,7 @@ export default function ChoosePlan() {
       id="membership"
     >
       <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8">
-        <CustomHeader whiteHeading="CHOOSE YOUR" colourHeading="PLAN" />
+        <CustomHeader whiteHeading="SIGN UP" colourHeading="NOW" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
           rewarding as possible. With our Gold Membership, your commitment to

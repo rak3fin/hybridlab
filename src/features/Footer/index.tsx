@@ -97,10 +97,17 @@ export default function Footer() {
       <div className="w-full bg-white h-0.5"></div>
       <div className="flex items-center justify-between mt-2 lg:mt-4">
         <h1 className="text-white font-light text-sm">
-          &copy; 2025 Hybrid Lab. All rights reserved
+          &copy; 2025 Hybrid Lab. All rights reserved.
         </h1>
         <h1 className="text-white font-light text-sm">
-          Proudly Designed &amp; Developed by Appifinity
+          Proudly Designed &amp; Developed by{" "}
+          <Link
+            href="https://www.appifinity.com/"
+            target="_blank"
+            className="text-site-main-color font-semibold underline"
+          >
+            Appifinity
+          </Link>
         </h1>
       </div>
     </footer>
