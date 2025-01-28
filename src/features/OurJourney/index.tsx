@@ -3,29 +3,29 @@ import Image from "next/image";
 
 export default function OurJourney() {
   return (
-    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-7 lg:gap-28">
-      <div className="flex flex-col lg:flex-row lg:items-start gap-5">
-        {/* <Image
+    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-start justify-center gap-7 lg:gap-14">
+      <div className="flex flex-col lg:flex-row gap-5">
+        <Image
           src="/extra/our-journey-cover.png"
           alt="VALUES IN ACTIONS"
           width={449}
           height={369}
-          className="w-80 lg:w-[28rem]"
-        /> */}
-        {/* <Image
+          className="w-80 lg:w-[28rem] lg:h-[31.25rem] object-cover"
+        />
+        <Image
           src="/extra/our-journey-cover-2.png"
           alt="VALUES IN ACTIONS"
           width={418}
           height={439}
-          className="w-80 lg:w-[26.125rem] lg:self-end"
-        /> */}
-        <Image
+          className="w-80 lg:w-[26.125rem] lg:h-[31.25rem] object-cover"
+        />
+        {/* <Image
           src="/extra/our-journey-cover-2.png"
           alt="VALUES IN ACTIONS"
           width={700}
           height={550}
           className="w-80 lg:w-[35rem]"
-        />
+        /> */}
       </div>
       <div className="flex flex-col gap-5 lg:max-w-3xl self-center">
         <CustomHeader whiteHeading="DISCOVER" colourHeading="OUR JOURNEY" />

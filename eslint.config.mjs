@@ -21,6 +21,7 @@ const eslintConfig = [
           argsIgnorePattern: "^_", // Ignore function arguments prefixed with _
         },
       ],
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ];
