@@ -10,7 +10,7 @@ export default function Contactus() {
         img="/banner/contact-us.png"
         path="Contact Us"
         heading="CONTACT US"
-        btnLabel="Know More"
+        btnLabel="Get In Touch"
         btnPath="#lets-talk"
       />
       <ContactDetails />
