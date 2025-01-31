@@ -1,7 +1,6 @@
 import CustomHeader from "@/components/ui/header";
 import Image from "next/image";
 import Link from "next/link";
-import { title } from "process";
 
 export default function EverythingYouNeed() {
   const membershipDetails = [
@@ -68,20 +67,4 @@ export default function EverythingYouNeed() {
   );
 }
 
-// [
-//   {
-//     id: 1,
-//     title: "10 + Programs",
-//     description: `Select one of our programs and follow apersonalized training plan tailored to your goals. Our plans are simple to follow and adaptable, allowing you to train at home or in the gym, swap exercises, and adjust session days to fit your schedule.`,
-//   },
-//   {
-//     id: 2,
-//     title: "Nutrition that works",
-//     description: `Discover dietitian-crafted meal guides tailored to your goals and preferences. Enjoy access to a recipe library with over 1,500 nutritious options, allowing you to savor the foods you love while staying on track with your goals.`,
-//   },
-//   {
-//     id: 3,
-//     title: "Train On-Demand",
-//     description: `Our On-Demand workouts bring expert coaching straight to your screen. Smash a hit session with Coach Zeb, hit the Bars with Coach Brett. With over 150 videos available, there's always a session ready for you, anytime, anywhere.`,
-//   },
-// ]
+

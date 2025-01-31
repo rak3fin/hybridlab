@@ -2,6 +2,7 @@ import BecomeHybridAthlete from "@/features/BecomeHybridAthlete";
 import ChoosePlan from "@/features/ChoosePlan";
 import ContactUs from "@/features/ContactUs";
 import EverythingYouNeed from "@/features/EverythingYouNeed";
+import ExpectFromApp from "@/features/ExpectFromApp";
 import Homehero from "@/features/Homehero";
 import HomeNeutrition from "@/features/HomeNeutrition";
 import MacroCalculator from "@/features/MacroCalculator";
@@ -15,6 +16,7 @@ export default function Home() {
       <BecomeHybridAthlete />
       <EverythingYouNeed />
       <OnlinePrograms />
+      <ExpectFromApp />
       <HomeNeutrition />
       <MacroCalculator />
       <ChoosePlan />
