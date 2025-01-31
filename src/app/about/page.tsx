@@ -16,8 +16,8 @@ export default function About() {
         btnLabel="Know More"
         btnPath="#about-us"
       />
-      <AboutHybridLab />
       <OurJourney />
+      <AboutHybridLab />
       <OurValues />
       <AboutVideo />
       <ChoosePlan />

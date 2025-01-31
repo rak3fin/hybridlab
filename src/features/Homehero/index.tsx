@@ -18,15 +18,17 @@ export default function Homehero() {
         <h1 className="text-site-main-color font-bold text-3xl md:text-5xl font-pilat text-center lg:text-left">
           HYBRID ATHLETE
         </h1>
-        <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
-          ANYONE
-        </h3>
-        <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
-          ANYTHING
-        </h3>
-        <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
-          ANYWHERE
-        </h3>
+        <div className="flex flex-col lg:flex-row gap-7 items-center lg:items-stretch">
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+            <span className="text-center">&#x2022;</span> ANYONE
+          </h3>
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+            <span className="text-center">&#x2022;</span> ANYTHING
+          </h3>
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+            <span className="text-center">&#x2022;</span> ANYWHERE
+          </h3>
+        </div>
         <p className="text-center lg:text-left font-semibold text-base md:text-xl xl:text-2xl text-white/80">
           <span className="font-bold text-white">
             Unlock your full potential with Hybrid Lab.

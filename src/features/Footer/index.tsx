@@ -17,11 +17,11 @@ export default function Footer() {
         <div className="flex flex-col gap-4 flex-1">
           <Link href="/" className="">
             <Image
-              src="/logo-dark.png"
+              src="/logo.png"
               alt="logo"
-              width={94}
-              height={66}
-              className="w-20 md:w-24"
+              width={453}
+              height={54}
+              className="w-40 md:w-[28.3rem]"
             />
           </Link>
           <p className="text-sm text-white/80">
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-full bg-white h-0.5"></div>
-      <div className="flex items-center justify-between mt-2 lg:mt-4">
+      <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between mt-2 lg:mt-4">
         <h1 className="text-white font-light text-sm">
           &copy; 2025 Hybrid Lab. All rights reserved.
         </h1>

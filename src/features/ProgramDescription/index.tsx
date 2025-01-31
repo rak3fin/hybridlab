@@ -21,6 +21,23 @@ export default function ProgramDescription() {
             helps prevent injuries and promotes balanced development across all
             areas of fitness.
           </p>
+          <div className="flex items-center self-start gap-2">
+            <button
+              type="button"
+              className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
+              // onClick={() => handelStartVideo(item.videoId)}
+            >
+              <Image
+                src="/extra/play-video-white.svg"
+                alt="play-button"
+                width={61}
+                height={61}
+              />
+            </button>
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+              Play Video
+            </span>
+          </div>
         </div>
       </div>
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch lg:justify-between lg:gap-12">
@@ -34,6 +51,23 @@ export default function ProgramDescription() {
             helps prevent injuries and promotes balanced development across all
             areas of fitness.
           </p>
+          <div className="flex items-center self-start gap-2">
+            <button
+              type="button"
+              className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
+              // onClick={() => handelStartVideo(item.videoId)}
+            >
+              <Image
+                src="/extra/play-video-white.svg"
+                alt="play-button"
+                width={61}
+                height={61}
+              />
+            </button>
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+              Play Video
+            </span>
+          </div>
         </div>
         <Image
           src="/online-programs/program-2.png"
@@ -60,6 +94,23 @@ export default function ProgramDescription() {
             setup, our programs are adaptable. We offer alternative exercises to
             fit various environments and equipment availability.
           </p>
+          <div className="flex items-center self-start gap-2">
+            <button
+              type="button"
+              className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
+              // onClick={() => handelStartVideo(item.videoId)}
+            >
+              <Image
+                src="/extra/play-video-white.svg"
+                alt="play-button"
+                width={61}
+                height={61}
+              />
+            </button>
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+              Play Video
+            </span>
+          </div>
         </div>
       </div>
     </section>
