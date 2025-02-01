@@ -42,7 +42,7 @@ export default function ExpectFromApp() {
             </div>
             <div className="flex flex-col gap-5">
               <h2
-                className="font-bold text-2xl lg:text-2xl text-center text-white font-pilat"
+                className="font-bold text-xl lg:text-2xl text-center text-white font-pilat"
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
               <p

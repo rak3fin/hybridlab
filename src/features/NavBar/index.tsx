@@ -24,7 +24,7 @@ export default function NavBar({
 
   return (
     <nav
-      className="flex justify-between w-full items-center px-4 md:px-16 xl:px-32 py-5 bg-[#181818] fixed top-0 left-0 z-50"
+      className="flex justify-between w-full items-center px-4 md:px-16 xlg:px-32 py-5 bg-[#181818] fixed top-0 left-0 z-50"
       ref={ref}
     >
       <Link href="/">

@@ -11,7 +11,7 @@ export default function ContactUs() {
     });
   };
   return (
-    <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col items-center lg:gap-12">
+    <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col items-center lg:gap-12">
       <CustomHeader whiteHeading="CONTACT" colourHeading="US" />
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-24 mt-6">
         <Image

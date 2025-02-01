@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ProgramContactBanner() {
   return (
-    <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col items-center lg:gap-12">
+    <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-14 lg:py-24 flex flex-col items-center lg:gap-12">
       {/* <CustomHeader whiteHeading="CONTACT" colourHeading="US" /> */}
       <div className="flex flex-col-reverse lg:flex-row items-center gap-5 md:gap-8 xl:gap-12 mt-6 lg:mt-0">
         <div className="flex flex-col items-center lg:items-stretch flex-1 gap-5 md:gap-8 xl:gap-12">

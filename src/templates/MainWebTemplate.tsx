@@ -16,7 +16,7 @@ export default function MainWebTemplate({
       <NavBar ref={navbarRef} />
       <main style={{ marginTop }}>{children}</main>
       <button type="button" className="fixed bottom-5 right-5">
-        <Image src="/Bot-logo.png" alt="bot" width={76} height={76} />
+        <Image src="/Bot-logo.png" alt="bot" width={76} height={76} className="w-16 lg:w-[4vmax]" />
       </button>
       <Footer />
     </>

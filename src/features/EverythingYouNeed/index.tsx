@@ -39,14 +39,14 @@ export default function EverythingYouNeed() {
           height={719}
           className="mb-4 lg:mb-0 lg:w-[37.44vmax] shrink-0"
         />
-        <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-14 shrink">
+        <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8 shrink">
           {membershipDetails.map((item) => (
             <div
               className="flex flex-col gap-2 items-center lg:items-stretch"
               key={item.id}
             >
               <h2
-                className="font-bold text-2xl lg:text-2xl text-center lg:text-left text-white"
+                className="font-bold text-xl lg:text-2xl text-center lg:text-left text-white"
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
               <p

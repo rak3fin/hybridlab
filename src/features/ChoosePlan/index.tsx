@@ -9,7 +9,7 @@ export default function ChoosePlan() {
   const [annually, setAnnually] = useState<boolean>(false);
   return (
     <section
-      className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-7 lg:py-24 flex flex-col lg:flex-row items-center gap-12"
+      className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-12"
       id="membership"
     >
       <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8">

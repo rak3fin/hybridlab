@@ -11,7 +11,7 @@ export default function AboutHybridLab() {
         whiteHeading="Hybrid Lab: Redefining Athletic Training For The"
         colourHeading="Modern Athlete"
       />
-      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 lg:gap-12">
+      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-28">
         <div className="flex flex-col gap-7 lg:gap-12 lg:self-center lg:w-4/12">
           <h2 className="font-bold text-lg lg:text-3xl font-pilat text-white text-center lg:text-left">
             Our <span className="text-site-main-color">Vision</span>
@@ -30,18 +30,18 @@ export default function AboutHybridLab() {
         <Image
           src="/about/about-cover-1.png"
           alt="programs"
-          width={762}
+          width={780}
           height={500}
-          className="w-[24.87rem] lg:w-[39.68vmax]"
+          className="w-[24.87rem] lg:w-[40.6vmax]"
         />
       </div>
-      <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:justify-between gap-5 lg:gap-12">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-28">
         <Image
           src="/about/about-cover-2.png"
           alt="about"
-          width={762}
+          width={780}
           height={500}
-          className="w-[24.87rem] lg:w-[39.68vmax]"
+          className="w-[24.87rem] lg:w-[40.6vmax]"
         />
         <div className="flex flex-col gap-4 lg:self-center lg:w-4/12">
           <h2 className="font-bold text-lg lg:text-3xl font-pilat text-white text-center lg:text-left">
