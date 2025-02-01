@@ -18,14 +18,14 @@ export default function Homehero() {
         <h1 className="text-site-main-color font-bold text-3xl md:text-5xl font-pilat text-center lg:text-left">
           HYBRID ATHLETE
         </h1>
-        <div className="flex flex-col lg:flex-row gap-7 items-center lg:items-stretch">
-          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-7 items-center lg:items-stretch">
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white inline-flex items-center">
             <span className="text-center">&#x2022;</span> ANYONE
           </h3>
-          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white inline-flex items-center">
             <span className="text-center">&#x2022;</span> ANYTHING
           </h3>
-          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white">
+          <h3 className="font-semibold text-center lg:text-left text-xl md:text-3xl xl:text-5xl tracking-[0.05em] text-white inline-flex items-center">
             <span className="text-center">&#x2022;</span> ANYWHERE
           </h3>
         </div>

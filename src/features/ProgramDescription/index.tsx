@@ -21,7 +21,7 @@ export default function ProgramDescription() {
             helps prevent injuries and promotes balanced development across all
             areas of fitness.
           </p>
-          <div className="flex items-center self-start gap-2">
+          <div className="flex items-center self-center lg:self-start gap-2">
             <button
               type="button"
               className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
@@ -34,7 +34,7 @@ export default function ProgramDescription() {
                 height={61}
               />
             </button>
-            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white self-center">
               Play Video
             </span>
           </div>
@@ -51,7 +51,7 @@ export default function ProgramDescription() {
             helps prevent injuries and promotes balanced development across all
             areas of fitness.
           </p>
-          <div className="flex items-center self-start gap-2">
+          <div className="flex items-center self-center lg:self-start gap-2">
             <button
               type="button"
               className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
@@ -64,7 +64,7 @@ export default function ProgramDescription() {
                 height={61}
               />
             </button>
-            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white self-center">
               Play Video
             </span>
           </div>
@@ -94,7 +94,7 @@ export default function ProgramDescription() {
             setup, our programs are adaptable. We offer alternative exercises to
             fit various environments and equipment availability.
           </p>
-          <div className="flex items-center self-start gap-2">
+          <div className="flex items-center self-center lg:self-start gap-2">
             <button
               type="button"
               className="text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
@@ -107,7 +107,7 @@ export default function ProgramDescription() {
                 height={61}
               />
             </button>
-            <span className="font-pilat font-semibold text-base lg:text-xl text-white">
+            <span className="font-pilat font-semibold text-base lg:text-xl text-white self-center">
               Play Video
             </span>
           </div>
