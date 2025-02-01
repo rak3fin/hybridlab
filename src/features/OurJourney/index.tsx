@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function OurJourney() {
   return (
-    <div className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-center justify-center gap-7 lg:gap-14">
+    <div
+      className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center lg:items-center justify-center gap-7 lg:gap-14"
+      id="about-us"
+    >
       <div className="flex flex-col lg:flex-row gap-5 shrink-0">
         <Image
           src="/extra/our-journey-cover.png"

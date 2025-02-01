@@ -3,10 +3,7 @@ import Image from "next/image";
 
 export default function AboutHybridLab() {
   return (
-    <section
-      className="flex flex-col items-center gap-7 lg:gap-12 px-4 md:px-14 xl:px-28 py-7 lg:py-24"
-      id="about-us"
-    >
+    <section className="flex flex-col items-center gap-7 lg:gap-12 px-4 md:px-14 xl:px-28 py-7 lg:py-24">
       <CustomHeader
         whiteHeading="Hybrid Lab: Redefining Athletic Training For The"
         colourHeading="Modern Athlete"

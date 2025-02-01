@@ -4,10 +4,7 @@ import { IoMdMail } from "react-icons/io";
 
 export default function ContactDetails() {
   return (
-    <section
-      className="flex flex-col items-center my-12 mx-4 gap-3 lg:gap-7 lg:mx-32"
-      id="lets-talk"
-    >
+    <section className="flex flex-col items-center my-12 mx-4 gap-3 lg:gap-7 lg:mx-32">
       <h2 className="tracking-[0.04em] text-xl lg:text-3xl font-bold text-center text-white">
         Let&apos;s talk
       </h2>

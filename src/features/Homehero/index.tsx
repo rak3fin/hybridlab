@@ -39,7 +39,7 @@ export default function Homehero() {
           href="#membership"
           className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 lg:py-6 px-6 lg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
-          GET STARTED NOW
+          Get Started Now
         </Link>
         <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
           <Image
