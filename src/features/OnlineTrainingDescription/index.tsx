@@ -1,11 +1,12 @@
 import CustomHeader from "@/components/ui/header";
 import OnlinePrograms from "../OnlinePrograms";
+import ProgramList from "../ProgramList";
 
 export default function OnlineTrainingDescription() {
   return (
     <>
       <section
-        className="flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24"
+        className="flex flex-col px-4 md:px-14 xl:px-28 pt-7 lg:py-24"
         id="online-training"
       >
         <div className="flex flex-col items-center gap-4 lg:gap-7">
@@ -22,7 +23,8 @@ export default function OnlineTrainingDescription() {
           </p>
         </div>
       </section>
-      <OnlinePrograms showMore={false} />
+      <ProgramList />
+      {/* <OnlinePrograms showMore={false} /> */}
     </>
   );
 }

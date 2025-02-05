@@ -17,7 +17,7 @@ export default function OnlinePrograms() {
       />
       <OnlineTrainingDescription />
       <ChoosePlan />
-      <ProgramDescription />
+      {/* <ProgramDescription /> */}
       <ProgramContactBanner />
     </MainWebTemplate>
   );

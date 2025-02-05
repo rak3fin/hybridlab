@@ -6,14 +6,15 @@ export default function OurValues() {
     <div className="bg-[url('/custom-bg/about-value-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 pt-12 flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-24">
       <div className="flex flex-col gap-5 shrink">
         <CustomHeader whiteHeading="OUR VALUES" colourHeading="IN ACTION" />
-        <p className="text-base lg:text-xl text-center lg:text-left text-white/70">
-          Hybrid Lab represents the spirit of versatility and inclusivity in the
-          fitness world. We are a diverse team of fitness experts,
-          nutritionists, and tech enthusiasts dedicated to creating a platform
-          that adapts to the evolving needs of modern athletes. Our passion for
-          fitness and innovation drives us to continuously improve and expand
-          our offerings, ensuring that we meet the demands of a wide range of
-          training styles and preferences.
+        <p className="text-sm lg:text-xl text-center lg:text-left text-white/70 tracking-[0.04em]">
+          At Hybrid Lab, we walk the talk. After both stepping away from Rugby
+          league, Brett and Zeb continue to challenge themselves through
+          high-intensity events. Brett has competed in events like Turf Games,
+          Trinity Throwdown, Hyrox, and marathons. Meanwhile, Zeb, at 40, has
+          already secured two Super League premierships &#40;2019-2020&#41; and
+          continues to set the bar by competing in events such as Turf Games and
+          Hyrox. Together, they push the limits of their potential, showing
+          what&apos;s possible at any stage of life.
         </p>
       </div>
       <Image

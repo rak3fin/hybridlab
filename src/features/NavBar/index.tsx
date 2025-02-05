@@ -22,6 +22,10 @@ export default function NavBar({
     return pathname === href ? true : false;
   };
 
+  const isActiveSubRoute = (href: string) => {
+    return pathname.includes(href) ? true : false;
+  };
+
   return (
     <nav
       className="flex justify-between w-full items-center px-4 md:px-16 xlg:px-32 py-5 bg-[#181818] fixed top-0 left-0 z-50"
@@ -57,7 +61,10 @@ export default function NavBar({
               <Link
                 href="/online-program"
                 className={`pb-1 hover:border-b-2 border-white ${
-                  isActiveRoute("/online-program") ? "border-b-2" : "border-0"
+                  isActiveRoute("/online-program") ||
+                  isActiveSubRoute("/program/")
+                    ? "border-b-2"
+                    : "border-0"
                 }`}
               >
                 Online Programs

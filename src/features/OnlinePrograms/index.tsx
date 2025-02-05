@@ -1,4 +1,5 @@
 import CustomHeader from "@/components/ui/header";
+import { All_Program_Details } from "@/helpers/programData";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,53 +9,19 @@ export default function OnlinePrograms({
 }: {
   showMore?: boolean;
 }) {
-  const onlineProgarms = [
-    {
-      id: 1,
-      title: "HYROX PROGRAM",
-      cover: {
-        src: "/programs/hyrox.png",
-        alt: "hyrox",
-      },
-    },
-    {
-      id: 2,
-      title: "strength program",
-      cover: {
-        src: "/programs/strentgth.png",
-        alt: "strength",
-      },
-    },
-    {
-      id: 3,
-      title: "functional program",
-      cover: {
-        src: "/programs/functional.png",
-        alt: "functional",
-      },
-    },
-    {
-      id: 4,
-      title: "conditioning program",
-      cover: {
-        src: "/programs/conditioning.png",
-        alt: "conditioning",
-      },
-    },
-  ];
   return (
     <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 lg:gap-12">
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-between">
-        {onlineProgarms.map((program) => (
+        {All_Program_Details.slice(0, 4).map((program) => (
           <div
             className="flex items-center justify-center relative"
-            key={program.id}
+            key={program.title}
           >
             <div className="overflow-hidden">
               <Image
-                src={program.cover.src}
-                alt={program.cover.alt}
+                src={program.cover}
+                alt={program.title}
                 width={400}
                 height={624}
                 className="w-[25rem] lg:w-[20.8vmax] transition-transform hover:scale-110 duration-500"
