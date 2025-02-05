@@ -1,5 +1,4 @@
 import CustomHeader from "@/components/ui/header";
-import OnlinePrograms from "../OnlinePrograms";
 import ProgramList from "../ProgramList";
 
 export default function OnlineTrainingDescription() {
