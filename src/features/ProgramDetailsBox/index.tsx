@@ -9,7 +9,7 @@ export default function ProgramDetailsBox({
   description: any;
 }) {
   return (
-    <div className="overflow-hidden w-full overflow-y-scroll px-4 lg:px-14 lg:h-[91vh] no-scrollbar mt-8 lg:mt-auto py-16">
+    <div className="overflow-hidden w-full overflow-y-scroll px-4 lg:px-14 lg:h-[91vh] no-scrollbar mt-8 lg:mt-auto py-8">
       {supportImg && supportImg.length >= 0 && (
         <div className="flex gap-4 flex-col lg:flex-row">
           {supportImg.map((img: string, index: number | string) => (
@@ -38,7 +38,7 @@ export default function ProgramDetailsBox({
               {heading}
             </h1>
             <div
-              className="text-sm lg:text-base text-white tracking-[0.04em] leading-[16px] md:leading-[20px] xl:leading-[26px]"
+              className="text-sm lg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
               dangerouslySetInnerHTML={{ __html: details }}
             />
           </div>

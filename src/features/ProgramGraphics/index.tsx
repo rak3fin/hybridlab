@@ -36,10 +36,10 @@ export default function ProgramGraphics({
   };
 
   return (
-    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-16 xl:shrink-0 lg:h-full lg:max-w-[60vmax]">
+    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-8 xl:shrink-0 lg:h-full lg:max-w-[60vmax]">
       <Link
         href="/online-program"
-        className="hidden lg:inline-flex gap-3 items-center text-white font-semibold font-pilat tracking-[0.02em] text-base"
+        className="hidden lg:inline-flex gap-3 items-center text-white hover:text-site-main-color font-semibold font-pilat tracking-[0.02em] text-base"
       >
         <FaArrowLeftLong />
         <span>Back to Online Program Page</span>
@@ -94,7 +94,7 @@ export default function ProgramGraphics({
           )}
         </div>
         <p
-          className="text-sm text-white lg:text-base lg:max-w-2xl"
+          className="text-sm text-white lg:text-base lg:max-w-[40vmax]"
           dangerouslySetInnerHTML={{ __html: paraDescription || "" }}
         />
         <Button className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap lg:self-start rounded-none">

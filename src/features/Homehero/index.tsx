@@ -33,7 +33,7 @@ export default function Homehero() {
           <span className="font-bold text-white">
             Unlock your full potential with Hybrid Lab.
           </span>{" "}
-          The Key to your next level of training found in one app.
+          The key to your next level of training found in one app.
         </p>
         <Link
           href="#membership"

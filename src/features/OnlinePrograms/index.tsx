@@ -14,7 +14,8 @@ export default function OnlinePrograms({
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 justify-between">
         {All_Program_Details.slice(0, 4).map((program) => (
-          <div
+          <Link
+            href={program.btnLink}
             className="flex items-center justify-center relative"
             key={program.title}
           >
@@ -32,7 +33,7 @@ export default function OnlinePrograms({
                 {program.title}
               </h1>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       {showMore && (

@@ -46,7 +46,7 @@ export default function ExpectFromApp() {
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
               <p
-                className="text-base lg:text-xl text-center text-white/60 tracking-[0.04em]"
+                className="text-sm lg:text-lg text-center text-white/60 tracking-[0.04em]"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></p>
             </div>

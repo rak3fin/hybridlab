@@ -36,7 +36,8 @@ export default function OurJourney() {
           <p className="text-sm lg:text-base text-center lg:text-left text-white/80">
             At Hybrid Lab, we&apos;re passionate about helping you Reach Your
             Potential. Founded by Zeb Taia and Brett Stratton, our platform is
-            built to push limits and redefine what&apos;s possible in fitness. <br />
+            built to push limits and redefine what&apos;s possible in fitness.{" "}
+            <br />
             Zeb Taia; a former professional rugby league player - has spent
             years mastering strength, conditioning, and high-intensity training.
             Now at 40 years old, Zeb continues to challenge himself, pushing the
@@ -58,9 +59,9 @@ export default function OurJourney() {
         everything from strength training, hypertrophy, and conditioning to
         calisthenics and endurance running. His passion lies in testing the
         limits of the mind and body, and that&apos;s why Hybrid Lab exists - to
-        help others unlock their full potential. <br />{" "}
+        help others unlock their full potential. <br />
       </p>
-      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm lg:text-xl">
+      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm lg:text-xl font-medium">
         Together, Zeb and Brett bring a wealth of knowledge and hands-on
         experience, providing a dynamic platform for athletes to push themselves
         across all areas of fitness.

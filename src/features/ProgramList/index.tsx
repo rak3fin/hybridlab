@@ -5,7 +5,7 @@ import { All_Program_Details } from "@/helpers/programData";
 export default function ProgramList() {
 
   return (
-    <section className="flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 md:gap-12 xl:gap-24">
+    <section className="flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-12 items-center gap-7 md:gap-12 xl:gap-16">
       <CustomHeader
         whiteHeading="EXPLORE OUR"
         colourHeading="TRAINING PROGRAMS"

@@ -5,7 +5,7 @@ export default function OnlineTrainingDescription() {
   return (
     <>
       <section
-        className="flex flex-col px-4 md:px-14 xl:px-28 pt-7 lg:py-24"
+        className="flex flex-col px-4 md:px-14 xl:px-28 pt-7 lg:py-12"
         id="online-training"
       >
         <div className="flex flex-col items-center gap-4 lg:gap-7">
