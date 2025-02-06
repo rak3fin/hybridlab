@@ -280,6 +280,8 @@ const programData = [
         <p><span style="color: #FFDE59">&#10004;</span> Progressive Training Blocks - Foundations, Strength & Power, and High-Performance Phases.</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Work Capacity & Conditioning - Engine-building workouts to improve stamina and durability.</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Mobility & Recovery - Essential routines to keep you injury-free and moving at your best.</p><br/>
+        <br/>
+        <p style="font-weight:700; font-size: 20px;">This program is designed for those ready to train like an athlete, push limits, and see real results.</p>
         `,
       },
     ],

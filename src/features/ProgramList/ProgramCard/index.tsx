@@ -15,7 +15,7 @@ export default function ProgramCard({
   cover: string;
 }) {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-5 lg:gap-12 lg:p-5 lg:border-b border-white/50 xl:shrink-0">
+    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-5 lg:gap-12 lg:p-5 lg:last:border-0 lg:border-b border-white/50 xl:shrink-0">
       {cover && (
         <Image
           src={cover}

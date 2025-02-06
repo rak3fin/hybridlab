@@ -108,7 +108,9 @@ export default function NavBar({
         <Link
           href="/online-program"
           className={`pb-1 hover:border-b-2 border-white ${
-            isActiveRoute("/online-program") ? "border-b-2" : "border-0"
+            isActiveRoute("/online-program") || isActiveSubRoute("/program/")
+              ? "border-b-2"
+              : "border-0"
           }`}
         >
           Online Programs

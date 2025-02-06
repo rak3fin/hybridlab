@@ -36,7 +36,7 @@ export default function ProgramGraphics({
   };
 
   return (
-    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-16 xl:shrink-0 lg:h-full lg:max-w-[60%]">
+    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-16 xl:shrink-0 lg:h-full lg:max-w-[60vmax]">
       <Link
         href="/online-program"
         className="hidden lg:inline-flex gap-3 items-center text-white font-semibold font-pilat tracking-[0.02em] text-base"
@@ -44,7 +44,7 @@ export default function ProgramGraphics({
         <FaArrowLeftLong />
         <span>Back to Online Program Page</span>
       </Link>
-      <Carousel className="">
+      <Carousel className="max-w-[40vmax]">
         <CarouselContent className="">
           {video.map((item: any, index: string | number) => (
             <CarouselItem key={index}>
@@ -54,7 +54,7 @@ export default function ProgramGraphics({
                   alt="video-thumb"
                   width={633}
                   height={311}
-                  className="w-full h-[30vh] object-cover"
+                  className="w-[40vmax] h-[30vh] object-cover"
                 />
                 <button
                   type="button"
