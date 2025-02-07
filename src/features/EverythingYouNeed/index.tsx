@@ -61,10 +61,24 @@ export default function EverythingYouNeed() {
           >
             Download App
           </Link>
+          <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
+            <Image
+              src="/extra/play-button.png"
+              alt="play"
+              width={210}
+              height={72}
+              className="w-36 lg:w-[11vmax]"
+            />
+            <Image
+              src="/extra/appstore-button.png"
+              alt="play"
+              width={210}
+              height={72}
+              className="w-36 lg:w-[11vmax]"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-
