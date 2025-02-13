@@ -139,7 +139,7 @@ export default function HomeNeutrition() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
         {nutrition.map((item) => (
           <div
-            className="bg-white flex flex-col gap-5 p-6 shadow-[0px_4px_23.1px_0px_#00000026] relative justify-between"
+            className="bg-white flex flex-col gap-5 shadow-[0px_4px_23.1px_0px_#00000026] relative justify-between pt-2 pb-6"
             key={item.id}
           >
             <div className="flex flex-col gap-4 mx-2">
@@ -148,13 +148,13 @@ export default function HomeNeutrition() {
                 alt={item.cover.alt}
                 width={350}
                 height={295}
-                className="w-[21.75rem] lg:w-[18.22vmax]"
+                className="w-full"
               />
               <h1 className="text-black font-semibold font-pilat text-lg lg:text-2xl text-center uppercase">
                 {item.title}
               </h1>
             </div>
-            <div className="flex flex-col gap-4 mx-2">
+            <div className="flex flex-col gap-4 mx-6">
               {item.details.map((detail) => (
                 <div className="inline-flex gap-4 items-center" key={detail.id}>
                   <h3 className="font-semibold text-base lg:text-lg text-black">

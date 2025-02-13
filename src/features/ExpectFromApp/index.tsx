@@ -35,18 +35,18 @@ export default function ExpectFromApp() {
               <Image
                 src={item.img}
                 alt="app-mockup"
-                width={268}
-                height={578}
-                className="mb-4 lg:mb-0 w-60 lg:w-[14vmax] shrink-0"
+                width={295}
+                height={599}
+                className="mb-4 lg:mb-0 w-60 lg:w-[15.36vmax] shrink-0"
               />
             </div>
             <div className="flex flex-col gap-5">
               <h2
-                className="font-bold text-xl lg:text-2xl text-center text-white font-pilat"
+                className="font-bold text-lg lg:text-xl text-center text-white font-pilat"
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
               <p
-                className="text-sm lg:text-lg text-center text-white/60 tracking-[0.04em]"
+                className="text-xs lg:text-base text-center text-white/60 tracking-[0.04em]"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></p>
             </div>

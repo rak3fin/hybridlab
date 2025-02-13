@@ -53,7 +53,7 @@ export default function EverythingYouNeed() {
           <Accordion type="single" collapsible defaultValue="Hybrid Lab">
             {membershipDetails.map((item) => (
               <AccordionItem value={item.value} key={item.id}>
-                <AccordionTrigger className="font-bold text-xl lg:text-xl text-center lg:text-left text-white">
+                <AccordionTrigger className="font-bold text-lg lg:text-xl text-center lg:text-left text-white">
                   <span dangerouslySetInnerHTML={{ __html: item.title }} />
                 </AccordionTrigger>
                 <AccordionContent className="text-xs lg:text-base text-center lg:text-left text-white/60 tracking-[0.04em]">
