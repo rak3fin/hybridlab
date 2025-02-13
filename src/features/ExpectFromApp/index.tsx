@@ -35,9 +35,9 @@ export default function ExpectFromApp() {
               <Image
                 src={item.img}
                 alt="app-mockup"
-                width={239}
-                height={499}
-                className="mb-4 lg:mb-0 w-60 lg:w-[12.44vmax] shrink-0"
+                width={268}
+                height={578}
+                className="mb-4 lg:mb-0 w-60 lg:w-[14vmax] shrink-0"
               />
             </div>
             <div className="flex flex-col gap-5">

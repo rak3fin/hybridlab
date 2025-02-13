@@ -37,10 +37,10 @@ export default function NavBar({
           alt="logo"
           width={453}
           height={54}
-          className="w-40 md:w-[28.3rem]"
+          className="w-40 min-[1200px]:w-[28.3rem]"
         />
       </Link>
-      <div className="md:hidden bg-inherit">
+      <div className="min-[1200px]:hidden bg-inherit">
         <Sheet>
           <SheetTrigger>
             <AlignRight size={26} className="text-white" />
@@ -96,7 +96,7 @@ export default function NavBar({
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex gap-14 font-pilat font-semibold text-white">
+      <div className="hidden min-[1200px]:flex gap-14 font-pilat font-semibold text-white">
         <Link
           href="/"
           className={`pb-1 hover:border-b-2 border-white ${

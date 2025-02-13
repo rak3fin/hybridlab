@@ -9,10 +9,10 @@ export default function ChoosePlan() {
   const [annually, setAnnually] = useState<boolean>(false);
   return (
     <section
-      className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-12"
+      className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-12 lg:justify-evenly"
       id="membership"
     >
-      <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8">
+      <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8 lg:max-w-lg w-full">
         <CustomHeader whiteHeading="SIGN UP" colourHeading="NOW" />
         <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
@@ -68,8 +68,8 @@ export default function ChoosePlan() {
             <Check /> 10+ programs &amp; levels Included:
           </h2>
           <p className="text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2 ps-4 lg:ps-8">
-            Hybrid Running Program, Full body 5 Days and 3 Days split, Hypertrophy
-            Muscle Gain Program, Etc
+            Hybrid Running Program, Full body 5 Days and 3 Days split,
+            Hypertrophy Muscle Gain Program, Etc
           </p>
           <h2 className="font-semibold text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
             <Check /> On demand recovery, Mobility, Pilates/yoga workouts

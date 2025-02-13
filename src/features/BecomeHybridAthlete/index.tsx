@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function BecomeHybridAthlete() {
   return (
-    <div className="bg-[url('/custom-bg/home-becoming-hybrid-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 pt-12 flex flex-col lg:flex-row items-center justify-between">
-      <div className="flex flex-col gap-5 mb-7 lg:mb-40 lg:max-w-3xl">
+    <div className="bg-[url('/custom-bg/home-becoming-hybrid-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 flex flex-col lg:flex-row items-center justify-between">
+      <div className="flex flex-col gap-5 lg:max-w-3xl self-center">
         <CustomHeader whiteHeading="BECOME A" colourHeading="HYBRID ATHLETE" />
         <p className="text-sm lg:text-lg text-center lg:text-left text-white/70">
           Whether your ambition is to lift heavy, build muscle, or become an
@@ -23,9 +23,9 @@ export default function BecomeHybridAthlete() {
       <Image
         src="/extra/become-hybrid-lab.png"
         alt="become hybrid lab"
-        width={535}
-        height={736}
-        className="w-80 lg:w-[35rem]"
+        width={631}
+        height={817}
+        className="w-80 lg:w-[32.8vmax]"
       />
     </div>
   );
