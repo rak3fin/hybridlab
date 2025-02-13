@@ -25,7 +25,7 @@ export default function OnlinePrograms({
                 alt={program.title}
                 width={400}
                 height={624}
-                className="w-[25rem] lg:w-[20.8vmax] transition-transform hover:scale-110 group-hover:scale-110 duration-500 object-cover h-[35rem]"
+                className="w-[25rem] scale-105 lg:w-[20.8vmax] transition-transform hover:scale-110 group-hover:scale-110 duration-500 object-cover h-[35rem]"
               />
             </div>
             <div className="absolute bottom-0 left-0 w-full flex flex-col items-center py-14 bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.75)_89.9%)]">

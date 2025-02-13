@@ -150,7 +150,7 @@ export default function HomeNeutrition() {
                 height={295}
                 className="w-full"
               />
-              <h1 className="text-black font-semibold font-pilat text-lg lg:text-2xl text-center uppercase">
+              <h1 className="text-black font-semibold font-pilat text-base lg:text-xl text-center uppercase">
                 {item.title}
               </h1>
             </div>
