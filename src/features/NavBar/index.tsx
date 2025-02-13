@@ -35,9 +35,9 @@ export default function NavBar({
         <Image
           src="/logo.png"
           alt="logo"
-          width={453}
-          height={54}
-          className="w-40 min-[1200px]:w-[28.3rem]"
+          width={381}
+          height={30}
+          className="w-40 min-[1200px]:w-[23.8rem]"
         />
       </Link>
       <div className="min-[1200px]:hidden bg-inherit">

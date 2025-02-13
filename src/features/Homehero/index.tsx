@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Homehero() {
   return (
-    <div className="bg-[url('/custom-bg/home-hero-bg.png')] bg-cover bg-no-repeat px-5 md:px-14 xlg:px-28 py-7 flex flex-col lg:flex-row items-center md:gap-20 xlg:gap-40">
+    <div className="bg-[url('/custom-bg/home-hero-bg.png')] bg-cover bg-no-repeat bg-center px-5 md:px-14 xlg:px-28 py-7 flex flex-col lg:flex-row items-center md:gap-20 xlg:gap-40">
       <div className="flex flex-col items-center lg:items-stretch my-4 gap-4 lg:gap-8">
         <h3 className="font-black tracking-[0.04em] text-base md:text-2xl xl:text-3xl text-white">
           BECOME A

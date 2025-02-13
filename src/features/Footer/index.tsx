@@ -19,9 +19,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="logo"
-              width={453}
-              height={54}
-              className="w-40 md:w-[28.3rem]"
+              width={381}
+              height={30}
+              className="w-40 md:w-[23.8rem]"
             />
           </Link>
           <p className="text-sm text-white/80">
