@@ -95,21 +95,21 @@ export default function HomeNeutrition() {
     },
     {
       id: 4,
-      title: "Spinach Shakshuka",
+      title: "Grilled Chicken & Pineapple Salad",
       cover: {
-        src: "/nutrition/spinach-shakshuka.png",
-        alt: "spinach-shakshuka",
+        src: "/nutrition/grilled-chicken-pineapple-salad.png",
+        alt: "grilled-chicken-pineapple-salad",
       },
       details: [
         {
           id: 1,
           title: "Calories",
-          value: "354kcal",
+          value: "356kcal",
         },
         {
           id: 2,
           title: "Protein",
-          value: "38g",
+          value: "27g",
         },
         {
           id: 3,
@@ -119,7 +119,7 @@ export default function HomeNeutrition() {
         {
           id: 4,
           title: "Carbs",
-          value: "33g",
+          value: "34g",
         },
       ],
     },
