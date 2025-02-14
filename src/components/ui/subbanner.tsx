@@ -34,7 +34,7 @@ export default function SubBanner({
         </h1>
         <Link
           href={btnPath}
-          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 xlg:py-6 px-6 xlg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300 mt-4 lg:mt-5"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 xlg:py-6 px-6 xlg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300 mt-4 lg:mt-5"
         >
           {btnLabel}
         </Link>
