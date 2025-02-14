@@ -75,7 +75,7 @@ export default function ContactUs() {
             <button
               type="button"
               onClick={handelSubmit}
-              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-4 px-6 lg:px-7 self-center lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
+              className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 xlg:py-4 px-6 lg:px-7 self-center lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
             >
               Submit
             </button>

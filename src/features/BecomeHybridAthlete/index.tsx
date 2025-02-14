@@ -6,16 +6,16 @@ export default function BecomeHybridAthlete() {
     <div className="bg-[url('/custom-bg/home-becoming-hybrid-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 flex flex-col lg:flex-row items-center justify-between">
       <div className="flex flex-col gap-5 lg:max-w-3xl self-center">
         <CustomHeader whiteHeading="BECOME A" colourHeading="HYBRID ATHLETE" />
-        <p className="text-sm lg:text-lg text-center lg:text-left text-white/70 lg:max-w-lg">
+        <p className="text-sm lg:text-base text-center lg:text-left text-white/70 lg:max-w-lg">
           Whether your ambition is to lift heavy, build muscle, or become an
           endurance athlete, Hybrid Lab is here to support you.
         </p>
-        <p className="text-sm lg:text-lg text-center lg:text-left text-white/70 lg:max-w-lg">
+        <p className="text-sm lg:text-base text-center lg:text-left text-white/70 lg:max-w-lg">
           Our platform offers customized training plans and nutritional advice
           tailored to your specific needs, ensuring that you have the resources
           to succeed in any fitness endeavor.
         </p>
-        <p className="text-sm lg:text-lg text-center lg:text-left text-white/70 lg:max-w-lg">
+        <p className="text-sm lg:text-base text-center lg:text-left text-white/70 lg:max-w-lg">
           Join us at Hybrid Lab, and let&apos;s redefine what&apos;s possible in
           the world of athletic training-anyone, anything, anywhere.
         </p>

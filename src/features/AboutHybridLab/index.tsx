@@ -10,7 +10,7 @@ export default function AboutHybridLab() {
       />
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch justify-center gap-5 lg:gap-28">
         <div className="flex flex-col gap-7 lg:gap-12 lg:self-center lg:w-4/12">
-          <h2 className="font-bold text-lg lg:text-3xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-bold text-2xl xlg:text-3xl font-pilat text-white text-center lg:text-left">
             Our <span className="text-site-main-color">Vision</span>
           </h2>
           <p className="text-base text-white/60 text-center lg:text-left">
@@ -41,13 +41,13 @@ export default function AboutHybridLab() {
           className="w-[24.87rem] lg:w-[40.6vmax]"
         />
         <div className="flex flex-col gap-4 lg:self-center lg:w-4/12">
-          <h2 className="font-bold text-lg xlg:text-3xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-bold text-2xl xlg:text-3xl font-pilat text-white text-center lg:text-left">
             Our <span className="text-site-main-color">Mission</span>
           </h2>
           <p className="text-base text-white/60 text-center lg:text-left">
             Our mission at Hybrid Lab is to provide a comprehensive, online
             fitness platformthat caters to the varied needs of athletes. Whether
-            your goal is to lift heavyweights, build muscle, run long distances,
+            your goal is to lift heavy weights, build muscle, run long distances,
             or excel in endurance sports, we offertailored training programs and
             nutritional guidance to support your journey. Byintegrating
             cutting-edge technology with expert knowledge, we

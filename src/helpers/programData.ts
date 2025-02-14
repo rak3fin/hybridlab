@@ -5,7 +5,7 @@ const programData = [
     subTitle: `Train Smarter. Race Stronger. Dominate the Competition.`,
     subPara: `Get race-ready with a structured 8 or 12-week training plan designed for peak Hyrox performance!`,
     btnLink: `/program/hyrox-competition-training-program`,
-    cover: `/programs/hyrox/hyrox-3.png`,
+    cover: `/programs/hyrox/hyrox-cover.png`,
     video: [
       {
         src: "/programs/hyrox/video-thumb/hyrox-video-thumb-1.png",
@@ -66,7 +66,7 @@ const programData = [
     subTitle: `Built for Beginners, Intermediates & Advanced Lifters`,
     subPara: `Develop Strength. Build Muscle. Improve Conditioning.`,
     btnLink: `/program/strength-and-hypertrophy-program`,
-    cover: `/programs/strentgth/strength-1.png`,
+    cover: `/programs/strentgth/strength-cover.png`,
     paraDescription: `This 12-week structured program is designed to help you gain muscle, improve strength, and enhance overall conditioning. Whether you're a beginner looking for a structured routine or an advanced lifter wanting a progressive challenge, this program will help you build serious strength and athletic endurance.`,
     video: [
       {
@@ -146,7 +146,7 @@ const programData = [
     subTitle: `Master Bodyweight Strength, Control & Mobility`,
     subPara: `Build Strength. Improve Mobility. Unlock Advanced Skills.`,
     btnLink: `/program/calisthenics-foundations-program`,
-    cover: `/programs/calisthenics/calisthenic-1.png`,
+    cover: `/programs/calisthenics/calisthenic-cover.png`,
     video: [
       {
         src: "/programs/calisthenics/video-thumb/calisthenic-video-thumb-1.png",
@@ -195,7 +195,7 @@ const programData = [
     subTitle: `Crush Your Next Race - 10K | Half Marathon | Full Marathon`,
     subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/running-performance-programs`,
-    cover: `/programs/endurance/endurance-2.png`,
+    cover: `/programs/endurance/endurance-cover.png`,
     video: [
       {
         src: "/programs/endurance/video-thumb/endurance-running-1.png",

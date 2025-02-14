@@ -27,11 +27,11 @@ export default function ProgramCard({
       )}
       <div className="flex flex-col lg:flex-row justify-between gap-7 items-center flex-1">
         <div className="flex flex-col gap-7">
-          <h1 className="text-white text-xl lg:text-3xl font-semibold font-pilat text-center lg:text-left">
+          <h1 className="text-white text-2xl xlg:text-3xl font-semibold font-pilat text-center lg:text-left">
             {title}
           </h1>
           <div className="flex flex-col gap-3 lg:gap-5">
-            <h2 className="text-base lg:text-xl text-white font-semibold text-center lg:text-left">
+            <h2 className="text-base xlg:text-xl text-white font-semibold text-center lg:text-left">
               {subTitle}
             </h2>
             {subPara && (
@@ -43,7 +43,7 @@ export default function ProgramCard({
         </div>
         <Link
           href={btnLink}
-          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xlg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap"
         >
           Start Training Today!
         </Link>

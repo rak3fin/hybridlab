@@ -31,7 +31,7 @@ export default function ChoosePlan() {
         </p>
         <Link
           href="/contact-us"
-          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 self-center lg:self-start font-pilat capitalize transition-transform hover:scale-[1.05] duration-300"
+          className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xg:py-6 px-6 xlg:px-8 self-center lg:self-start font-pilat capitalize transition-transform hover:scale-[1.05] duration-300"
         >
           get in touch
         </Link>
@@ -80,7 +80,7 @@ export default function ChoosePlan() {
         </div>
         <button
           type="button"
-          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
+          className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xlg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           Enroll Now
         </button>

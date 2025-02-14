@@ -23,17 +23,17 @@ export default function MacroCalculator() {
         className="h-64 lg:h-auto object-cover"
       />
       <div className="bg-[linear-gradient(90deg,_#000000_-10.93%,_rgba(0,_0,_0,_0)_100%)] absolute w-full h-full flex flex-col ps-4 lg:ps-32 justify-center gap-2 lg:gap-5">
-        <h3 className="font-pilat text-white font-bold text-base lg:text-6xl tracking-[0.04em]">
+        <h3 className="font-pilat text-white font-bold text-base lg:text-5xl tracking-[0.04em]">
           MACRO
         </h3>
-        <h1 className="font-pilat text-white font-bold text-3xl lg:text-7xl tracking-[0.04em]">
+        <h1 className="font-pilat text-white font-bold text-3xl lg:text-6xl tracking-[0.04em]">
           CALCULATOR
         </h1>
-        <h4 className="font-pilat text-white/60 text-xs lg:text-2xl tracking-[0.04em] font-semibold">
+        <h4 className="font-pilat text-white/60 text-xs lg:text-xl tracking-[0.04em] font-semibold">
           FIND OUT YOUR DAILY MACRO TARGETS
         </h4>
         <Dialog open={openCalculator} onOpenChange={setOpenCalculator}>
-          <DialogTrigger className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300 mt-4 lg:mt-5">
+          <DialogTrigger className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xlg:py-6 px-6 xlg:px-7 self-start font-pilat transition-transform hover:scale-[1.05] duration-300 mt-4 lg:mt-5">
             Calculate
           </DialogTrigger>
           <DialogContent className="bg-[#383838] border-none outline-none">

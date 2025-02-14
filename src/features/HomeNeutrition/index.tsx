@@ -95,7 +95,7 @@ export default function HomeNeutrition() {
     },
     {
       id: 4,
-      title: "Grilled Chicken & Pineapple Salad",
+      title: "Mexican Fried Rice",
       cover: {
         src: "/nutrition/grilled-chicken-pineapple-salad.png",
         alt: "grilled-chicken-pineapple-salad",
@@ -104,12 +104,12 @@ export default function HomeNeutrition() {
         {
           id: 1,
           title: "Calories",
-          value: "356kcal",
+          value: "360kcal",
         },
         {
           id: 2,
           title: "Protein",
-          value: "27g",
+          value: "24g",
         },
         {
           id: 3,
@@ -119,7 +119,7 @@ export default function HomeNeutrition() {
         {
           id: 4,
           title: "Carbs",
-          value: "34g",
+          value: "32g",
         },
       ],
     },
