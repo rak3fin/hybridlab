@@ -33,7 +33,7 @@ export default function OurJourney() {
         </div>
         <div className="flex flex-col gap-5 self-center">
           <CustomHeader whiteHeading="WHO" colourHeading="WE ARE" />
-          <p className="text-sm lg:text-base text-center lg:text-left text-white/80">
+          <p className="text-sm xlg:text-base text-center lg:text-left text-white/80">
             At Hybrid Lab, we&apos;re passionate about helping you Reach Your
             Potential. Founded by Zeb Taia and Brett Stratton, our platform is
             built to push limits and redefine what&apos;s possible in fitness.{" "}
@@ -49,7 +49,7 @@ export default function OurJourney() {
           </p>
         </div>
       </div>
-      <p className="text-sm lg:text-base text-center lg:text-left text-white/80">
+      <p className="text-sm xlg:text-base text-center lg:text-left text-white/80">
         Brett Stratton has been in the fitness industry for over 13 years,
         transitioning from a semi-professional rugby league player to a fitness
         expert. Originally from New Zealand, he moved to the Gold Coast at 12
@@ -61,7 +61,7 @@ export default function OurJourney() {
         limits of the mind and body, and that&apos;s why Hybrid Lab exists - to
         help others unlock their full potential. <br />
       </p>
-      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm lg:text-xl font-medium">
+      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm xlg:text-xl font-medium">
         Together, Zeb and Brett bring a wealth of knowledge and hands-on
         experience, providing a dynamic platform for athletes to push themselves
         across all areas of fitness.

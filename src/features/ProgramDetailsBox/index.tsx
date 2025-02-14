@@ -34,11 +34,11 @@ export default function ProgramDetailsBox({
             key={index}
             className="flex flex-col gap-7 py-7 lg:border-b border-white lg:last:border-0"
           >
-            <h1 className="font-bold text-xl lg:text-2xl tracking-[0.02em] text-site-main-color font-pilat mt-5 mb-3">
+            <h1 className="font-bold text-xl xlg:text-2xl tracking-[0.02em] text-site-main-color font-pilat mt-5 mb-3">
               {heading}
             </h1>
             <div
-              className="text-sm lg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
+              className="text-sm xlg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
               dangerouslySetInnerHTML={{ __html: details }}
             />
           </div>

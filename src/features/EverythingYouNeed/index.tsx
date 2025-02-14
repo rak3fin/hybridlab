@@ -50,13 +50,18 @@ export default function EverythingYouNeed() {
             whiteHeading="EVERYTHING YOU NEED"
             colourHeading="IN ONE APP"
           />
-          <Accordion type="single" collapsible defaultValue="Hybrid Lab">
+          <Accordion
+            type="single"
+            collapsible
+            defaultValue="Hybrid Lab"
+            className="w-full"
+          >
             {membershipDetails.map((item) => (
               <AccordionItem value={item.value} key={item.id}>
-                <AccordionTrigger className="font-bold text-lg lg:text-xl text-center lg:text-left text-white">
+                <AccordionTrigger className="font-bold text-lg xlg:text-xl text-white">
                   <span dangerouslySetInnerHTML={{ __html: item.title }} />
                 </AccordionTrigger>
-                <AccordionContent className="text-xs lg:text-base text-center lg:text-left text-white/60 tracking-[0.04em]">
+                <AccordionContent className="text-xs xlg:text-base text-white/60 tracking-[0.04em]">
                   <span
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   />

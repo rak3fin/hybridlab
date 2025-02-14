@@ -26,10 +26,10 @@ export default function AboutVideo() {
             className="w-full"
           />
         </div>
-        <h1 className="text-white font-bold text-lg text-center lg:text-3xl">
+        <h1 className="text-white font-bold text-lg text-center xlg:text-3xl">
           Hybrid Training : A Balanced Approach to Fitness
         </h1>
-        <p className="text-base text-white/80 text-center lg:text-xl">
+        <p className="text-base text-white/80 text-center xlg:text-xl">
           Imagine combining the power of weightlifting with the endurance of
           running in a single workout routine. That&apos;s hybrid training—it
           blends strength and cardiovascular exercises to give you the best of
@@ -39,7 +39,7 @@ export default function AboutVideo() {
         </p>
       </div>
       <div className="flex flex-col gap-7 lg:gap-12">
-        <h1 className="text-white font-bold text-lg text-center lg:text-3xl">
+        <h1 className="text-white font-bold text-lg text-center xlg:text-3xl">
           Other Videos
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20">
@@ -71,7 +71,7 @@ export default function AboutVideo() {
                 />
                 <button
                   type="button"
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl lg:text-4xl group-hover:scale-125 transition-transform duration-300"
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl xlg:text-4xl group-hover:scale-125 transition-transform duration-300"
                   onClick={() => handelStartVideo(item.videoId)}
                 >
                   <Image
@@ -88,7 +88,7 @@ export default function AboutVideo() {
             </div>
           ))}
         </div>
-        <p className="text-base text-white text-center lg:text-xl max-w-[90ch] self-center">
+        <p className="text-base text-white text-center xlg:text-xl max-w-[90ch] self-center">
           In essence, hybrid training is about being versatile—keeping your body
           guessing and your mind engaged. It&apos;s ideal for anyone who wants
           to get fit, stay healthy, and have fun doing it.

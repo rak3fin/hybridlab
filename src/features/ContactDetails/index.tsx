@@ -5,10 +5,10 @@ import { IoMdMail } from "react-icons/io";
 export default function ContactDetails() {
   return (
     <section className="flex flex-col items-center my-12 mx-4 gap-3 lg:gap-7 lg:mx-32">
-      <h2 className="tracking-[0.04em] text-xl lg:text-3xl font-bold text-center text-white">
+      <h2 className="tracking-[0.04em] text-xl xlg:text-3xl font-bold text-center text-white">
         Let&apos;s talk
       </h2>
-      <p className="text-white/80 text-base text-center lg:tracking-[0.07em] lg:text-2xl">
+      <p className="text-white/80 text-base text-center lg:tracking-[0.07em] xlg:text-2xl">
         Have questions, feedback, or inquiries? We&apos;d love to hear from you!
         Feel free to reach out to us using the contact information below or fill
         out the form, and we&apos;ll get back to you as soon as possible.
@@ -23,7 +23,7 @@ export default function ContactDetails() {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
       <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full">
-        <div className="inline-flex gap-2 text-white/90 text-base lg:text-2xl">
+        <div className="inline-flex gap-2 text-white/90 text-base xlg:text-2xl">
           <span className="flex items-center justify-center border rounded-full p-4 border-white">
             <FaLocationDot />
           </span>
@@ -33,7 +33,7 @@ export default function ContactDetails() {
         </div>
         <Link
           href="mailTo:admin@hybridlab.com.au"
-          className="inline-flex gap-2 text-white/90 text-base lg:text-2xl"
+          className="inline-flex gap-2 text-white/90 text-base xlg:text-2xl"
         >
           <span className="flex items-center justify-center border rounded-full p-4 border-white">
             <IoMdMail />

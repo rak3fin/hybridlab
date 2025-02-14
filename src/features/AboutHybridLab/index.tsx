@@ -41,7 +41,7 @@ export default function AboutHybridLab() {
           className="w-[24.87rem] lg:w-[40.6vmax]"
         />
         <div className="flex flex-col gap-4 lg:self-center lg:w-4/12">
-          <h2 className="font-bold text-lg lg:text-3xl font-pilat text-white text-center lg:text-left">
+          <h2 className="font-bold text-lg xlg:text-3xl font-pilat text-white text-center lg:text-left">
             Our <span className="text-site-main-color">Mission</span>
           </h2>
           <p className="text-base text-white/60 text-center lg:text-left">

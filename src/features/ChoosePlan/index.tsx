@@ -14,17 +14,17 @@ export default function ChoosePlan() {
     >
       <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8 lg:max-w-lg w-full">
         <CustomHeader whiteHeading="SIGN UP" colourHeading="NOW" />
-        <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
           rewarding as possible. With our Gold Membership, your commitment to
           health and fitness becomes more effortless than ever.
         </p>
-        <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
           Choose between a budget friendly, Monthly billing option of $24.99AUD
           a month or a simple Annual billing cycle of $249.99AUD billed every 12
           months.
         </p>
-        <p className="text-base lg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
           rewarding as possible. With our Gold Membership, your commitment to
           health and fitness becomes more effortless than ever.
@@ -67,14 +67,14 @@ export default function ChoosePlan() {
           <h2 className="font-semibold text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
             <Check /> 10+ programs &amp; levels Included:
           </h2>
-          <p className="text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2 ps-4 lg:ps-8">
+          <p className="text-black text-base xlg:text-lg tracking-[0.02em] inline-flex items-center gap-2 ps-4 lg:ps-8">
             Hybrid Running Program, Full body 5 Days and 3 Days split,
             Hypertrophy Muscle Gain Program, Etc
           </p>
-          <h2 className="font-semibold text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
+          <h2 className="font-semibold text-black text-base xlg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
             <Check /> On demand recovery, Mobility, Pilates/yoga workouts
           </h2>
-          <h2 className="font-semibold text-black text-base lg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
+          <h2 className="font-semibold text-black text-base xlg:text-lg tracking-[0.02em] inline-flex items-center gap-2">
             <Check /> Meal Recipes and Guides with over 100+ recipes
           </h2>
         </div>

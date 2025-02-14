@@ -80,7 +80,7 @@ export default function ProgramGraphics({
         )}
       </Carousel>
       <div className="flex flex-col items-center lg:items-stretch gap-6">
-        <h1 className="font-bold text-lg lg:text-2xl tracking-[0.04em] text-white text-center lg:text-left font-pilat">
+        <h1 className="font-bold text-lg xlg:text-2xl tracking-[0.04em] text-white text-center lg:text-left font-pilat">
           {title}
         </h1>
         <div className="flex flex-col gap-4">
@@ -88,13 +88,13 @@ export default function ProgramGraphics({
             {subTitle}
           </h3>
           {subPara && (
-            <h4 className="text-sm text-center lg:text-left text-site-main-color lg:text-base">
+            <h4 className="text-sm text-center lg:text-left text-site-main-color xlg:text-base">
               {subPara}
             </h4>
           )}
         </div>
         <p
-          className="text-sm text-white lg:text-base lg:max-w-[40vmax]"
+          className="text-sm text-white xlg:text-base lg:max-w-[40vmax]"
           dangerouslySetInnerHTML={{ __html: paraDescription || "" }}
         />
         <Button className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap lg:self-start rounded-none">

@@ -13,7 +13,7 @@ export default function OnlineTrainingDescription() {
             whiteHeading="Welcome to Hybrid Lab"
             colourHeading="Online Training"
           />
-          <p className="text-base text-center text-white/80 lg:tracking-[0.04em] lg:text-2xl">
+          <p className="text-base text-center text-white/80 lg:tracking-[0.04em] xlg:text-2xl">
             At Hybrid Lab, we are dedicated to enhancing your fitness journey
             through a dynamic blend of strength and endurance training. Our
             online programs are designed to cater to athletes and fitness
