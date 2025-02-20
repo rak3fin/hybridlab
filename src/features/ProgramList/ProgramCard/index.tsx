@@ -15,14 +15,14 @@ export default function ProgramCard({
   cover: string;
 }) {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-5 lg:gap-12 lg:p-5 lg:last:border-0 lg:border-b border-white/50 xl:shrink-0">
+    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-5 lg:gap-12 lg:p-5 lg:last:border-0 lg:border-b border-white/50 xl:shrink-0 group">
       {cover && (
         <Image
           src={cover}
           alt={title}
           width={398}
           height={388}
-          className="lg:w-[13.54vmax] aspect-square object-cover"
+          className="lg:w-[13.54vmax] aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
         />
       )}
       <div className="flex flex-col lg:flex-row justify-between gap-7 items-center flex-1">
@@ -45,7 +45,7 @@ export default function ProgramCard({
           href={btnLink}
           className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xlg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap"
         >
-          Start Training Today!
+          Learn More
         </Link>
       </div>
     </div>

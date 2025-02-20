@@ -5,12 +5,12 @@ export default function ProgramContactBanner() {
   return (
     <section className="bg-[url('/custom-bg/contact-us-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-14 xl:px-28 py-14 lg:py-24 flex flex-col items-center lg:gap-12">
       {/* <CustomHeader whiteHeading="CONTACT" colourHeading="US" /> */}
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-5 md:gap-8 xl:gap-12 mt-6 lg:mt-0">
-        <div className="flex flex-col items-center lg:items-stretch flex-1 gap-4 md:gap-5 xl:gap-8">
+      <div className="flex flex-col-reverse lg:flex-row items-center w-full gap-5 md:gap-8 xl:gap-12 mt-6 lg:mt-0 justify-evenly">
+        <div className="flex flex-col items-center lg:items-stretch gap-4 md:gap-5 xl:gap-8">
           <h1 className="text-2xl font-pilat text-white font-semibold xlg:text-3xl">
             Get Started Today
           </h1>
-          <p className="text-base xlg:text-2xl lg:tracking-[0.04em] text-white/80 text-center lg:text-left">
+          <p className="text-base xlg:text-2xl lg:tracking-[0.04em] text-white/80 text-center lg:text-left lg:max-w-lg">
             Transform your approach to fitness with Hybrid Lab. Join us for our
             online programs and begin your journey toward achieving your health
             and fitness goals. We welcome everyone, from beginners to seasoned

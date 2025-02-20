@@ -7,7 +7,7 @@ export default function OurJourney() {
       className="bg-[url('/custom-bg/our-journey-bg.png')] bg-center bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col lg:gap-6"
       id="about-us"
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-7 lg:gap-14">
+      <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between gap-7 lg:gap-14">
         <div className="flex flex-col lg:flex-row gap-5 shrink-0">
           <Image
             src="/extra/our-journey-cover.png"
@@ -33,7 +33,7 @@ export default function OurJourney() {
         </div>
         <div className="flex flex-col gap-5 self-center">
           <CustomHeader whiteHeading="WHO" colourHeading="WE ARE" />
-          <p className="text-sm xlg:text-base text-center lg:text-left text-white">
+          <p className="text-sm xlg:text-base text-center lg:text-left text-white lg:max-w-lg">
             At Hybrid Lab, we&apos;re passionate about helping you Reach Your
             Potential. Founded by Zeb Taia and Brett Stratton, our platform is
             built to push limits and redefine what&apos;s possible in fitness.{" "}
@@ -49,7 +49,7 @@ export default function OurJourney() {
           </p>
         </div>
       </div>
-      <p className="text-sm xlg:text-base text-center lg:text-left text-white">
+      <p className="text-sm xlg:text-base text-center lg:text-left text-white ">
         Brett Stratton has been in the fitness industry for over 13 years,
         transitioning from a semi-professional rugby league player to a fitness
         expert. Originally from New Zealand, he moved to the Gold Coast at 12

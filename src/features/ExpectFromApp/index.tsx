@@ -28,7 +28,7 @@ export default function ExpectFromApp() {
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-14 shrink mt-6 lg:mt-0">
         {membershipDetails.map((item) => (
           <div
-            className="flex flex-col gap-2 lg:gap-14 items-center"
+            className="flex flex-col gap-2 lg:gap-14 items-center group"
             key={item.id}
           >
             <div className="">
@@ -37,7 +37,7 @@ export default function ExpectFromApp() {
                 alt="app-mockup"
                 width={295}
                 height={599}
-                className="mb-4 lg:mb-0 w-60 lg:w-[15.36vmax] shrink-0"
+                className="mb-4 lg:mb-0 w-60 lg:w-[15.36vmax] shrink-0 group-hover:scale-110 duration-500 transition-transform"
               />
             </div>
             <div className="flex flex-col gap-5">
@@ -46,7 +46,7 @@ export default function ExpectFromApp() {
                 dangerouslySetInnerHTML={{ __html: item.title }}
               />
               <p
-                className="text-sm xlg:text-base text-center text-white/60 tracking-[0.04em]"
+                className="text-sm xlg:text-base text-center text-white/60 group-hover:text-white duration-500 transition-colors tracking-[0.04em]"
                 dangerouslySetInnerHTML={{ __html: item.description }}
               ></p>
             </div>

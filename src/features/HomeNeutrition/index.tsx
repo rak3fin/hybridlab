@@ -139,7 +139,7 @@ export default function HomeNeutrition() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
         {nutrition.map((item) => (
           <div
-            className="bg-white flex flex-col gap-5 shadow-[0px_4px_23.1px_0px_#00000026] relative justify-between pt-2 pb-6"
+            className="bg-white flex flex-col gap-5 shadow-[0px_4px_23.1px_0px_#00000026] relative justify-between pt-2 pb-6 hover:scale-110 duration-500 transition-transform"
             key={item.id}
           >
             <div className="flex flex-col gap-4 mx-2">

@@ -37,13 +37,13 @@ export default function EverythingYouNeed() {
   ];
   return (
     <div className="bg-[url('/custom-bg/everything-you-need-bg.png')] bg-cover bg-no-repeat bg-center flex flex-col  px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center lg:gap-12">
-      <div className="flex flex-col lg:flex-row items-center lg:gap-16 mt-8 lg:mt-0">
+      <div className="flex flex-col lg:flex-row items-center lg:gap-16 mt-8 lg:mt-0 group">
         <Image
           src="/extra/app-mockup.png"
           alt="everything-you-need"
           width={883}
           height={883}
-          className="mb-4 lg:mb-0 lg:w-[46vmax] shrink-0"
+          className="mb-4 lg:mb-0 lg:w-[46vmax] shrink-0 transition-transform hover:scale-110 duration-500"
         />
         <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8 shrink">
           <CustomHeader

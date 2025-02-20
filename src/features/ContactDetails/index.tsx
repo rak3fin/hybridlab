@@ -19,7 +19,7 @@ export default function ContactDetails() {
         height="100%"
         allowFullScreen={false}
         loading="lazy"
-        className="mt-9 h-48 lg:h-[37.5rem]"
+        className="mt-9 h-48 lg:h-[37.5rem] lg:w-[70%]"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
       <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full">
