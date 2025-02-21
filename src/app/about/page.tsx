@@ -1,4 +1,3 @@
-import SubBanner from "@/components/ui/subbanner";
 import AboutHybridLab from "@/features/AboutHybridLab";
 import AboutVideo from "@/features/AboutVideo";
 import ChoosePlan from "@/features/ChoosePlan";
