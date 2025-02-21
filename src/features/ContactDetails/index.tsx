@@ -1,7 +1,3 @@
-import Link from "next/link";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
-
 export default function ContactDetails() {
   return (
     <section className="flex flex-col items-center my-12 mx-4 gap-3 lg:gap-7 lg:mx-32">
@@ -22,7 +18,6 @@ export default function ContactDetails() {
         className="mt-9 h-48 lg:h-[35rem] lg:w-[65%]"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
-      
     </section>
   );
 }
