@@ -35,7 +35,7 @@ export default function HomeNeutrition() {
     },
     {
       id: 2,
-      title: "Salmon & Peach Salad",
+      title: `Salmon & Peach <br/>Salad`,
       cover: {
         src: "/nutrition/waldrof-chicken-salad-2.png",
         alt: "waldrof-chicken-salad",
@@ -95,7 +95,7 @@ export default function HomeNeutrition() {
     },
     {
       id: 4,
-      title: "Mexican Fried Rice",
+      title: `Mexican Fried <br/>Rice`,
       cover: {
         src: "/nutrition/grilled-chicken-pineapple-salad.png",
         alt: "grilled-chicken-pineapple-salad",
@@ -150,9 +150,10 @@ export default function HomeNeutrition() {
                 height={295}
                 className="w-full"
               />
-              <h1 className="text-black font-semibold font-pilat text-base lg:text-xl text-center uppercase">
-                {item.title}
-              </h1>
+              <h1
+                className="text-black font-semibold font-pilat text-base lg:text-xl text-center uppercase"
+                dangerouslySetInnerHTML={{ __html: item.title }}
+              />
             </div>
             <div className="flex flex-col gap-4 mx-6">
               {item.details.map((detail) => (

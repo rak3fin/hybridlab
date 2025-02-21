@@ -22,25 +22,7 @@ export default function ContactDetails() {
         className="mt-9 h-48 lg:h-[35rem] lg:w-[65%]"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
-      <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full">
-        <div className="inline-flex gap-2 text-white/90 text-base xlg:text-2xl">
-          <span className="flex items-center justify-center border rounded-full p-4 border-white">
-            <FaLocationDot />
-          </span>
-          <span className="self-center">
-            Hybrid Lab HQ - 7/49 Leda Drive, Burleigh heads, Qld, 4220
-          </span>
-        </div>
-        <Link
-          href="mailTo:info@hybridlabtraining.com"
-          className="inline-flex gap-2 text-white/90 text-base xlg:text-2xl"
-        >
-          <span className="flex items-center justify-center border rounded-full p-4 border-white">
-            <IoMdMail />
-          </span>
-          <span className="self-center">info@hybridlabtraining.com</span>
-        </Link>
-      </div>
+      
     </section>
   );
 }

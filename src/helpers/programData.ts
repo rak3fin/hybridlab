@@ -126,27 +126,43 @@ const programData = [
       },
       {
         heading: `TRAINING SPLIT`,
-        details: `<p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">Monday (BUILD) - Lower Body (Glutes & Hamstrings)</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Heavy compound lifts to build posterior chain strength</p><br/>
+        details: [
+          {
+            title: `Monday (BUILD) - Lower Body (Glutes & Hamstrings)`,
+            content: `
+            <p><span style="color: #FFDE59">&#10004;</span> Heavy compound lifts to build posterior chain strength</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Accessory work to enhance glute & hamstring hypertrophy</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">Tuesday (BUILD) - Upper Body (Horizontal Push & Pull)</p>
+            `,
+          },
+          {
+            title: `Tuesday (BUILD) - Upper Body (Horizontal Push & Pull)`,
+            content: `
         <p><span style="color: #FFDE59">&#10004;</span> Focus on bench press, rows, dips & chest-supported pulls</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Strength and hypertrophy rep schemes</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">Wednesday (SWEAT) - Full-Body Conditioning</p>
+            `,
+          },
+          {
+            title: `Wednesday (SWEAT) - Full-Body Conditioning`,
+            content: `
         <p><span style="color: #FFDE59">&#10004;</span> High-intensity cardio & functional training</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Improves endurance, explosiveness, and work capacity</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">Thursday (BUILD) - Lower Body (Quads)</p>
+            `,
+          },
+          {
+            title: `Thursday (BUILD) - Lower Body (Quads)`,
+            content: `
         <p><span style="color: #FFDE59">&#10004;</span> Focus on squats, lunges, and quad-dominant movements</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Unilateral & accessory work for knee stability and strength</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">Friday (BUILD) - Upper Body (Vertical Push & Pull)</p>
+            `,
+          },
+          {
+            title: `Friday (BUILD) - Upper Body (Vertical Push & Pull)`,
+            content: `
         <p><span style="color: #FFDE59">&#10004;</span> Focus on overhead pressing, pull-ups, and traps</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Shoulder stability and strength-building accessory lifts</p><br/>
-        <br/>
-        `,
+            `,
+          },
+        ],
       },
       {
         heading: `WHO IS THIS PROGRAM FOR?`,
@@ -343,7 +359,7 @@ const programData = [
   },
   {
     title: `THE FUNCTIONAL 12-WEEK PROGRAM`,
-    shortTitle: `THE FUNCTIONAL`,
+    shortTitle: `FUNCTIONAL PROGRAM`,
     subTitle: `BUILD STRENGTH, POWER & ATHLETIC PERFORMANCE`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/the-functional-12-week-program`,
@@ -400,7 +416,7 @@ const programData = [
   },
   {
     title: `A WOD A DAY`,
-    shortTitle: `A WOD A DAY - PROGRAMS`,
+    shortTitle: `CONDITIONING PROGRAM`,
     subTitle: `A wod a day - Functional Fitness, Every Day`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/wod-a-day-conditioning`,

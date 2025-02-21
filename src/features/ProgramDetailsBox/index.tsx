@@ -30,7 +30,13 @@ export default function ProgramDetailsBox({
           ))}
         </div>
       )}
-      <Accordion type="single" collapsible defaultValue="0">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue={
+          description.length === 1 ? "0" : `${description.length - 1}`
+        }
+      >
         {description.map(
           (
             { heading, details }: { heading: string; details: string },
@@ -39,7 +45,7 @@ export default function ProgramDetailsBox({
             <AccordionItem
               value={`${index}`}
               key={index}
-              className="flex flex-col gap-7 py-7 lg:border-b border-white lg:last:border-0"
+              className="flex flex-col gap-7 lg:border-b border-white lg:last:border-0"
             >
               <AccordionTrigger className="font-bold text-xl xlg:text-2xl tracking-[0.02em] text-site-main-color font-pilat mt-5 mb-3 text-left">
                 {heading}
