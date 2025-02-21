@@ -1,8 +1,8 @@
 import { FiCalendar } from "react-icons/fi";
-import { LiaDumbbellSolid } from "react-icons/lia";
+import { LiaDumbbellSolid, LiaRunningSolid } from "react-icons/lia";
 import { LuBicepsFlexed } from "react-icons/lu";
-import { GiRunningShoe } from "react-icons/gi";
 import { IoBodyOutline } from "react-icons/io5";
+import { TbShoe } from "react-icons/tb";
 
 const programData = [
   {
@@ -26,25 +26,31 @@ const programData = [
     description: [
       {
         heading: `WHAT YOU GET IN THIS PROGRAM`,
-        details: `<p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">PROVEN TRAINING PLAN</p>
-        <p><span style="color: #FFDE59">&#10004;</span> A structured, easy-to-follow 8 or 12-week schedule</p><br/>
+        details: [
+          {
+            title: "PROVEN TRAINING PLAN",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> A structured, easy-to-follow 8 or 12-week schedule</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> 4-5 weekly runs to improve endurance, speed & pacing</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Strength & functional workouts for sled push, burpees, wall balls & rowing</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">RUNNING PERFORMANCE BREAKDOWN</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Cadence & pacing strategies for race-day efficiency</p><br/>
+        <p><span style="color: #FFDE59">&#10004;</span> Strength & functional workouts for sled push, burpees, wall balls & rowing</p><br/>`,
+          },
+          {
+            title: "RUNNING PERFORMANCE BREAKDOWN",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> Cadence & pacing strategies for race-day efficiency</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Heart rate zones & intensity targets for endurance and power</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Aerobic, threshold & sprint workouts tailored for Hyrox</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">HYROX-SPECIFIC WORKOUTS</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Hyrox-style strength training to master all 8 race stations</p><br/>
+        <p><span style="color: #FFDE59">&#10004;</span> Aerobic, threshold & sprint workouts tailored for Hyrox</p><br/>`,
+          },
+          {
+            title: "HYROX-SPECIFIC WORKOUTS",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> Hyrox-style strength training to master all 8 race stations</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Functional endurance workouts to increase stamina and muscular endurance</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Full race simulation days to perfect transitions and pacing</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">TAPER & RACE STRATEGY</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Learn how to peak at the right time for optimal race-day performance</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Pre-race nutrition, hydration & recovery guide include</p><br/>
-        `,
+        <p><span style="color: #FFDE59">&#10004;</span> Full race simulation days to perfect transitions and pacing</p><br/>`,
+          },
+          {
+            title: "TAPER & RACE STRATEGY",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> Learn how to peak at the right time for optimal race-day performance</p><br/>
+        <p><span style="color: #FFDE59">&#10004;</span> Pre-race nutrition, hydration & recovery guide include</p><br/>`,
+          },
+        ],
       },
       {
         heading: `CHOOSE YOUR PROGRAM`,
@@ -68,7 +74,7 @@ const programData = [
     features: [
       {
         icon: FiCalendar,
-        content: `8/12Week`,
+        content: `8-12Week`,
       },
       {
         icon: LiaDumbbellSolid,
@@ -79,7 +85,7 @@ const programData = [
         content: `Build Muscle`,
       },
       {
-        icon: GiRunningShoe,
+        icon: TbShoe,
         content: `Athletic`,
       },
     ],
@@ -269,24 +275,28 @@ const programData = [
     description: [
       {
         heading: `CHOOSE YOUR PROGRAM`,
-        details: `
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">10K TRAINING PROGRAM (8-12 WEEKS)</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Perfect for beginners or those looking to improve their 10K time</p><br/>
+        details: [
+          {
+            title: "10K TRAINING PROGRAM (8-12 WEEKS)",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> Perfect for beginners or those looking to improve their 10K time</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> 4-5 runs per week including intervals, tempo runs & long runs</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Race-day strategy & pacing guide included</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">HALF MARATHON TRAINING PROGRAM (12 WEEKS)</p>
-        <p><span style="color: #FFDE59">&#10004;</span> Ideal for intermediate runners preparing for 21.1km</p><br/>
+        <p><span style="color: #FFDE59">&#10004;</span> Race-day strategy & pacing guide included</p><br/>`,
+          },
+          {
+            title: "HALF MARATHON TRAINING PROGRAM (12 WEEKS)",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> Ideal for intermediate runners preparing for 21.1km</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Focus on building endurance, improving race pace & fueling strategies</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> 5-6 runs per week including long runs, tempo runs & progression runs</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Heart rate-based training & threshold workouts to maximize efficiency</p><br/>
-        <br/>
-        <p style="font-weight: 700; font-size: 24px; margin-bottom: 20px">FULL MARATHON TRAINING PROGRAM (16 WEEKS)</p>
-        <p><span style="color: #FFDE59">&#10004;</span> For those ready to conquer 42.2km with confidence</p><br/>
+        <p><span style="color: #FFDE59">&#10004;</span> Heart rate-based training & threshold workouts to maximize efficiency</p><br/>`,
+          },
+          {
+            title: "FULL MARATHON TRAINING PROGRAM (16 WEEKS)",
+            content: `<p><span style="color: #FFDE59">&#10004;</span> For those ready to conquer 42.2km with confidence</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> Advanced endurance-building workouts to handle the marathon distance</p><br/>
         <p><span style="color: #FFDE59">&#10004;</span> 6 runs per week including long slow distance (LSD), tempo runs & interval training</p><br/>
-        <p><span style="color: #FFDE59">&#10004;</span> Race-day nutrition, pacing & mental preparation strategies</p><br/>
-        `,
+        <p><span style="color: #FFDE59">&#10004;</span> Race-day nutrition, pacing & mental preparation strategies</p><br/>`,
+          },
+        ],
       },
       {
         heading: `WHAT'S INCLUDED?`,
@@ -318,7 +328,7 @@ const programData = [
         content: `8-12 Week`,
       },
       {
-        icon: GiRunningShoe,
+        icon: LiaRunningSolid,
         content: `Running`,
       },
       {
@@ -333,7 +343,7 @@ const programData = [
   },
   {
     title: `THE FUNCTIONAL 12-WEEK PROGRAM`,
-    shortTitle: `12-WEEK PROGRAM`,
+    shortTitle: `THE FUNCTIONAL`,
     subTitle: `BUILD STRENGTH, POWER & ATHLETIC PERFORMANCE`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/the-functional-12-week-program`,
@@ -383,14 +393,14 @@ const programData = [
         content: `Full Body`,
       },
       {
-        icon: GiRunningShoe,
-        content: `Running`,
+        icon: TbShoe,
+        content: `Athletic`,
       },
     ],
   },
   {
     title: `A WOD A DAY`,
-    shortTitle: `FUNCTIONAL FITNESS`,
+    shortTitle: `A WOD A DAY - PROGRAMS`,
     subTitle: `A wod a day - Functional Fitness, Every Day`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/wod-a-day-conditioning`,
@@ -442,7 +452,7 @@ const programData = [
         content: `Full Body`,
       },
       {
-        icon: GiRunningShoe,
+        icon: TbShoe,
         content: `Fat Loss`,
       },
     ],

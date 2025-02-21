@@ -36,7 +36,7 @@ export default function ProgramGraphics({
   };
 
   return (
-    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-8 xl:shrink-0 lg:h-full lg:max-w-[60vmax]">
+    <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-8 xl:shrink-0 lg:h-full lg:max-w-[60vmax] overflow-y-hidden">
       <Link
         href="/online-program"
         className="hidden lg:inline-flex gap-3 items-center text-white hover:text-site-main-color font-semibold font-pilat tracking-[0.02em] text-base"

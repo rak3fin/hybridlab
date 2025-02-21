@@ -1,5 +1,9 @@
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from "next/image";
 
 export default function ProgramDetailsBox({
@@ -26,13 +30,14 @@ export default function ProgramDetailsBox({
           ))}
         </div>
       )}
-      <Accordion type="single" collapsible>
+      <Accordion type="single" collapsible defaultValue="0">
         {description.map(
           (
             { heading, details }: { heading: string; details: string },
             index: number | string
           ) => (
-            <AccordionItem value={index.toString()}
+            <AccordionItem
+              value={`${index}`}
               key={index}
               className="flex flex-col gap-7 py-7 lg:border-b border-white lg:last:border-0"
             >
@@ -40,10 +45,32 @@ export default function ProgramDetailsBox({
                 {heading}
               </AccordionTrigger>
               <AccordionContent>
-                <div
-                  className="text-sm xlg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
-                  dangerouslySetInnerHTML={{ __html: details }}
-                />
+                {Array.isArray(details) ? (
+                  <Accordion type="single" collapsible defaultValue="0">
+                    {details.map((item, index) => (
+                      <AccordionItem
+                        value={`${index}`}
+                        key={index}
+                        className="flex flex-col gap-7 lg:border-b border-white lg:last:border-0"
+                      >
+                        <AccordionTrigger className="font-bold text-xl text-white text-left">
+                          {item.title}
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div
+                            className="text-sm xlg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
+                            dangerouslySetInnerHTML={{ __html: item.content }}
+                          />
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                ) : (
+                  <div
+                    className="text-sm xlg:text-base text-white tracking-[0.04em] leading-[20px] xl:leading-[26px]"
+                    dangerouslySetInnerHTML={{ __html: details }}
+                  />
+                )}
               </AccordionContent>
             </AccordionItem>
           )
