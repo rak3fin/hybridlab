@@ -22,7 +22,7 @@ export default function ProgramCard({
           alt={title}
           width={398}
           height={388}
-          className="lg:w-[13.54vmax] aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
+          className="lg:w-[13.54vmax] aspect-square object-top object-cover group-hover:scale-110 transition-transform duration-500"
         />
       )}
       <div className="flex flex-col lg:flex-row justify-between gap-7 items-center flex-1">

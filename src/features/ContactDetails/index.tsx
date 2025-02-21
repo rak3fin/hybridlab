@@ -19,7 +19,7 @@ export default function ContactDetails() {
         height="100%"
         allowFullScreen={false}
         loading="lazy"
-        className="mt-9 h-48 lg:h-[37.5rem] lg:w-[70%]"
+        className="mt-9 h-48 lg:h-[35rem] lg:w-[65%]"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
       <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full">
@@ -32,13 +32,13 @@ export default function ContactDetails() {
           </span>
         </div>
         <Link
-          href="mailTo:admin@hybridlab.com.au"
+          href="mailTo:info@hybridlabtraining.com"
           className="inline-flex gap-2 text-white/90 text-base xlg:text-2xl"
         >
           <span className="flex items-center justify-center border rounded-full p-4 border-white">
             <IoMdMail />
           </span>
-          <span className="self-center">admin@hybridlab.com.au</span>
+          <span className="self-center">info@hybridlabtraining.com</span>
         </Link>
       </div>
     </section>

@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsTwitterX } from "react-icons/bs";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -35,11 +32,11 @@ export default function Footer() {
             </span>
           </div>
           <Link
-            href="mailTo:admin@hybridlab.com.au"
+            href="mailTo:info@hybridlabtraining.com"
             className="inline-flex gap-1 items-center text-white text-sm"
           >
             <IoMdMail />
-            <span>admin@hybridlab.com.au</span>
+            <span>info@hybridlabtraining.com</span>
           </Link>
         </div>
         <div className="flex flex-col gap-4">
@@ -67,28 +64,13 @@ export default function Footer() {
           </h2>
           <ul className="flex gap-2">
             <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
-              <Link href="/">
+              <Link href="https://www.facebook.com/profile.php?id=61563604592889#" target="_blank" referrerPolicy="no-referrer">
                 <FaFacebookF />
               </Link>
             </li>
             <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
-              <Link href="/">
-                <FaTiktok />
-              </Link>
-            </li>
-            <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
-              <Link href="/">
+              <Link href="https://www.instagram.com/_hybridlab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" referrerPolicy="no-referrer">
                 <FaInstagram />
-              </Link>
-            </li>
-            <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
-              <Link href="/">
-                <FaLinkedinIn />
-              </Link>
-            </li>
-            <li className="inline-flex gap-1 items-center text-white text-base lg:text-lg">
-              <Link href="/">
-                <BsTwitterX />
               </Link>
             </li>
           </ul>

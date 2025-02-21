@@ -1,3 +1,9 @@
+import { FiCalendar } from "react-icons/fi";
+import { LiaDumbbellSolid } from "react-icons/lia";
+import { LuBicepsFlexed } from "react-icons/lu";
+import { GiRunningShoe } from "react-icons/gi";
+import { IoBodyOutline } from "react-icons/io5";
+
 const programData = [
   {
     title: `HYROX COMPETITION TRAINING PROGRAM`,
@@ -57,6 +63,24 @@ const programData = [
       {
         heading: `ARE YOU READY TO CONQUER HYROX?`,
         details: `<p style="font-weight: 600; font-size: 20px;">Get Instant Access & Start Training Now!</p>`,
+      },
+    ],
+    features: [
+      {
+        icon: FiCalendar,
+        content: `8/12Week`,
+      },
+      {
+        icon: LiaDumbbellSolid,
+        content: `sprint workouts`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `Build Muscle`,
+      },
+      {
+        icon: GiRunningShoe,
+        content: `Athletic`,
       },
     ],
   },
@@ -139,6 +163,24 @@ const programData = [
         details: `<p style="font-weight: 600; font-size: 20px;">Get Instant Access & Start Training Today!</p>`,
       },
     ],
+    features: [
+      {
+        icon: FiCalendar,
+        content: `12 Week`,
+      },
+      {
+        icon: LiaDumbbellSolid,
+        content: `Strength`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `Build Muscle`,
+      },
+      {
+        icon: IoBodyOutline,
+        content: `Full Body`,
+      },
+    ],
   },
   {
     title: `CALISTHENICS FOUNDATIONS PROGRAM`,
@@ -188,6 +230,24 @@ const programData = [
       },
     ],
     paraDescription: `Are you ready to master your bodyweight and develop true functional strength? Our Calisthenics Foundations Program is designed to take you from the basics to advanced bodyweight movements with a structured, progressive approach. This program focuses on handstand techniques, pull-up and muscle-up progressions, and bodyweight dips, evolving into weighted variations as you advance. Alongside calisthenics, we incorporate strength training and explosive lower-body plyometrics to enhance power, balance, and athleticism.`,
+    features: [
+      {
+        icon: FiCalendar,
+        content: `12 Week`,
+      },
+      {
+        icon: LiaDumbbellSolid,
+        content: `Strength`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `Calisthenics`,
+      },
+      {
+        icon: IoBodyOutline,
+        content: `Fat Loss`,
+      },
+    ],
   },
   {
     title: `RUNNING PERFORMANCE PROGRAMS`,
@@ -252,14 +312,32 @@ const programData = [
       },
     ],
     paraDescription: `Whether you're training for your first 10K, pushing for a Half Marathon PR, or taking on the ultimate challenge of a Full Marathon, this structured, science-backed training plan will help you build endurance, increase speed, and optimize race-day performance. Our 3 progressive programs are designed to meet you at your current level, guiding you from start to finish with paced runs, speed workouts, heart rate training, and race-day strategies to help you perform at your best.`,
+    features: [
+      {
+        icon: FiCalendar,
+        content: `8-12 Week`,
+      },
+      {
+        icon: GiRunningShoe,
+        content: `Running`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `increase speed`,
+      },
+      {
+        icon: IoBodyOutline,
+        content: `Strength`,
+      },
+    ],
   },
   {
     title: `THE FUNCTIONAL 12-WEEK PROGRAM`,
-    SHORTtITLE: ``,
+    shortTitle: `12-WEEK PROGRAM`,
     subTitle: `BUILD STRENGTH, POWER & ATHLETIC PERFORMANCE`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/the-functional-12-week-program`,
-    cover: `/programs/functional/functional-program-2.png`,
+    cover: `/programs/functional/functional-cover.png`,
     video: [
       {
         src: "/programs/functional/video-thumb/video-thumb-1.jpg",
@@ -291,14 +369,32 @@ const programData = [
       },
     ],
     paraDescription: `Unlock your full potential with our 12-Week Functional Training Program, designed to build strength, power, endurance, and mobility like never before. Whether you're an athlete or just looking to move and perform better, this progressive 3-phase system will take your fitness to the next level.`,
+    features: [
+      {
+        icon: FiCalendar,
+        content: `12 Week`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `Strength`,
+      },
+      {
+        icon: IoBodyOutline,
+        content: `Full Body`,
+      },
+      {
+        icon: GiRunningShoe,
+        content: `Running`,
+      },
+    ],
   },
   {
     title: `A WOD A DAY`,
-    shortTitle: ``,
+    shortTitle: `FUNCTIONAL FITNESS`,
     subTitle: `A wod a day - Functional Fitness, Every Day`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/wod-a-day-conditioning`,
-    cover: `/programs/wod-a-day/wod-a-day-2.png`,
+    cover: `/programs/wod-a-day/wod-a-day-cover.png`,
     video: [
       {
         src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-1.jpg",
@@ -332,6 +428,24 @@ const programData = [
       },
     ],
     paraDescription: `Looking for high-intensity, time-efficient workouts that push your limits and keep training exciting? A WOD A DAY is your go-to daily functional training program, designed to build strength, endurance, and power in just 30-40 minutes. Whether you're training at home, in a gym, or on the go, this program delivers fast, effective, and results-driven workouts that fit your lifestyle.`,
+    features: [
+      {
+        icon: FiCalendar,
+        content: `Every Day`,
+      },
+      {
+        icon: LuBicepsFlexed,
+        content: `Conditioning `,
+      },
+      {
+        icon: IoBodyOutline,
+        content: `Full Body`,
+      },
+      {
+        icon: GiRunningShoe,
+        content: `Fat Loss`,
+      },
+    ],
   },
 ];
 
