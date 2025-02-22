@@ -7,9 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import useClickOutSide from "@/hooks/useClickOutSide";
+// import useClickOutSide from "@/hooks/useClickOutSide";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 export default function ProgramGraphics({
@@ -25,9 +25,9 @@ export default function ProgramGraphics({
   subPara?: string;
   paraDescription?: string;
 }) {
-  const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
-  const [videoId, setVideoId] = useState<string>("");
-  const playerRef = useClickOutSide(() => setShowVideoModal(false));
+  // const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
+  // const [videoId, setVideoId] = useState<string>("");
+  // const playerRef = useClickOutSide(() => setShowVideoModal(false));
 
   // const handelStartVideo = (id: string) => {
   //   setVideoId(id);
@@ -103,7 +103,7 @@ export default function ProgramGraphics({
           Buy Now
         </Button>
       </div>
-      {showVideoModal && (
+      {/* {showVideoModal && (
         <div className="fixed top-0 left-0 w-full h-full bg-black/80 z-[1100] flex items-center justify-center overflow-hidden">
           <div
             className={`w-[80vw] h-[33vh] lg:h-[75vh] relative`}
@@ -118,7 +118,7 @@ export default function ProgramGraphics({
             ></iframe>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }
