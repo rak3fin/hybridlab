@@ -15,7 +15,7 @@ export default function About() {
           width={1920}
           className="h-64 lg:h-[35.8rem] object-cover"
           autoPlay
-          muted
+          muted loop
           height={573}
         ></video>
         <div className="bg-[linear-gradient(90deg,_#000000_-10.93%,_rgba(0,_0,_0,_0)_100%)] absolute w-full h-full flex flex-col ps-4 lg:ps-32 justify-center gap-2 lg:gap-5">

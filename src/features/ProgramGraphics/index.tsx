@@ -49,7 +49,7 @@ export default function ProgramGraphics({
           {video.map((item: any, index: string | number) => (
             <CarouselItem key={index}>
               <div className="relative">
-                <Image
+                {/* <Image
                   src={item.src}
                   alt="video-thumb"
                   width={633}
@@ -67,7 +67,10 @@ export default function ProgramGraphics({
                     width={80}
                     height={80}
                   />
-                </button>
+                </button> */}
+                <video src={item} width={633}
+                  height={311}
+                  className="w-full object-cover" autoPlay muted loop></video>
               </div>
             </CarouselItem>
           ))}

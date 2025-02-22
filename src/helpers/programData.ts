@@ -13,10 +13,11 @@ const programData = [
     btnLink: `/program/hyrox-competition-training-program`,
     cover: `/programs/hyrox/hyrox-cover.png`,
     video: [
-      {
-        src: "/programs/hyrox/video-thumb/hyrox-video-thumb-1.png",
-        videoId: "1ym2WPYmGhpFpQ0bwa5IRnxZIz-4WHi4X",
-      },
+      // {
+      //   src: "/programs/hyrox/video-thumb/hyrox-video-thumb-1.png",
+      //   videoId: "1ym2WPYmGhpFpQ0bwa5IRnxZIz-4WHi4X",
+      // },
+      "/programs/hyrox/hyrox-Video.mp4",
     ],
     supportImg: [
       "/programs/hyrox/hyrox-1.png",
@@ -99,18 +100,19 @@ const programData = [
     cover: `/programs/strentgth/strength-cover.png`,
     paraDescription: `This 12-week structured program is designed to help you gain muscle, improve strength, and enhance overall conditioning. Whether you're a beginner looking for a structured routine or an advanced lifter wanting a progressive challenge, this program will help you build serious strength and athletic endurance.`,
     video: [
-      {
-        src: "/programs/strentgth/video-thumb/strenght-video-thumb-1.jpg",
-        videoId: "1V-NCLeQYkpLw218gAhE_RRCIqUfEcq6z",
-      },
-      {
-        src: "/programs/strentgth/video-thumb/strenght-video-thumb-2.jpg",
-        videoId: "1DMQfyvt8UJXoLrpjWYmtY5ih-nUMAYfm",
-      },
-      {
-        src: "/programs/strentgth/video-thumb/strenght-video-thumb-3.jpg",
-        videoId: "1wHX1vjm4NI6G-pGtAW9U00jplNMdMwch",
-      },
+      // {
+      //   src: "/programs/strentgth/video-thumb/strenght-video-thumb-1.jpg",
+      //   videoId: "1V-NCLeQYkpLw218gAhE_RRCIqUfEcq6z",
+      // },
+      // {
+      //   src: "/programs/strentgth/video-thumb/strenght-video-thumb-2.jpg",
+      //   videoId: "1DMQfyvt8UJXoLrpjWYmtY5ih-nUMAYfm",
+      // },
+      // {
+      //   src: "/programs/strentgth/video-thumb/strenght-video-thumb-3.jpg",
+      //   videoId: "1wHX1vjm4NI6G-pGtAW9U00jplNMdMwch",
+      // },
+      "/programs/strentgth/strength-Video.mp4",
     ],
     supportImg: [
       "/programs/strentgth/strength-1.png",
@@ -212,10 +214,11 @@ const programData = [
     btnLink: `/program/calisthenics-foundations-program`,
     cover: `/programs/calisthenics/calisthenic-cover.png`,
     video: [
-      {
-        src: "/programs/calisthenics/video-thumb/calisthenic-video-thumb-1.png",
-        videoId: "1AvBnVwSQzxUEr2pxhDcjGdEhdQ31_cIj",
-      },
+      // {
+      //   src: "/programs/calisthenics/video-thumb/calisthenic-video-thumb-1.png",
+      //   videoId: "1AvBnVwSQzxUEr2pxhDcjGdEhdQ31_cIj",
+      // },
+      "/programs/calisthenics/caliesthenic-Video.mp4",
     ],
     supportImg: [
       "/programs/calisthenics/calisthenic-1.png",
@@ -279,10 +282,11 @@ const programData = [
     btnLink: `/program/running-performance-programs`,
     cover: `/programs/endurance/endurance-cover.png`,
     video: [
-      {
-        src: "/programs/endurance/video-thumb/endurance-running-1.png",
-        videoId: "1wnweKb0f9jiyUmMC2B-4acHHOmE3-iht",
-      },
+      // {
+      //   src: "/programs/endurance/video-thumb/endurance-running-1.png",
+      //   videoId: "1wnweKb0f9jiyUmMC2B-4acHHOmE3-iht",
+      // },
+      "/programs/endurance/running-Video.mp4",
     ],
     supportImg: [
       "/programs/endurance/endurance-1.png",
@@ -365,18 +369,19 @@ const programData = [
     btnLink: `/program/the-functional-12-week-program`,
     cover: `/programs/functional/functional-cover.png`,
     video: [
-      {
-        src: "/programs/functional/video-thumb/video-thumb-1.jpg",
-        videoId: "1z1ydg7s1sCr1Dxjzx69i16ZEGYOyLKKg",
-      },
-      {
-        src: "/programs/functional/video-thumb/video-thumb-2.jpg",
-        videoId: "1vDM1pB4eQ-uXkwinKCBGA4nLJMLyHzAj",
-      },
-      {
-        src: "/programs/functional/video-thumb/video-thumb-3.jpg",
-        videoId: "1tvTBdOvruiRFGVADwFDeNCXQevvzjjhY",
-      },
+      // {
+      //   src: "/programs/functional/video-thumb/video-thumb-1.jpg",
+      //   videoId: "1z1ydg7s1sCr1Dxjzx69i16ZEGYOyLKKg",
+      // },
+      // {
+      //   src: "/programs/functional/video-thumb/video-thumb-2.jpg",
+      //   videoId: "1vDM1pB4eQ-uXkwinKCBGA4nLJMLyHzAj",
+      // },
+      // {
+      //   src: "/programs/functional/video-thumb/video-thumb-3.jpg",
+      //   videoId: "1tvTBdOvruiRFGVADwFDeNCXQevvzjjhY",
+      // },
+      "/programs/functional/functional-Video.mp4",
     ],
     supportImg: [
       "/programs/functional/functional-program-1.png",
@@ -422,18 +427,19 @@ const programData = [
     btnLink: `/program/wod-a-day-conditioning`,
     cover: `/programs/wod-a-day/wod-a-day-cover.png`,
     video: [
-      {
-        src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-1.jpg",
-        videoId: "1PLG9mGLbTdoZnd3vWNbznHAdUgqTmhbF",
-      },
-      {
-        src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-2.jpg",
-        videoId: "1tk6LtCeWWAeo3k-ptBKHqSWa7Dr7fqUg",
-      },
-      {
-        src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-3.jpg",
-        videoId: "1DID1r6i5dSmHyGVm0mz9yZ64BhGTNiOI",
-      },
+      // {
+      //   src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-1.jpg",
+      //   videoId: "1PLG9mGLbTdoZnd3vWNbznHAdUgqTmhbF",
+      // },
+      // {
+      //   src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-2.jpg",
+      //   videoId: "1tk6LtCeWWAeo3k-ptBKHqSWa7Dr7fqUg",
+      // },
+      // {
+      //   src: "/programs/wod-a-day/video-thumb/wod-a-day-video-thumb-3.jpg",
+      //   videoId: "1DID1r6i5dSmHyGVm0mz9yZ64BhGTNiOI",
+      // },
+      "/programs/wod-a-day/wod-a-day-Video.mp4",
     ],
     supportImg: [
       "/programs/wod-a-day/wod-a-day-1.png",

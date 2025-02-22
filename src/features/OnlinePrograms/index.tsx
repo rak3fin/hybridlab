@@ -15,7 +15,7 @@ export default function OnlinePrograms() {
     <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 lg:gap-12">
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
       <Carousel>
-        <CarouselContent>
+        <CarouselContent className="">
           {All_Program_Details.map((program) => (
             <CarouselItem
               className="basis-full md:basis-1/2 xl:basis-1/4"
@@ -54,8 +54,10 @@ export default function OnlinePrograms() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="border border-site-main-color text-site-main-color bg-transparent hidden md:inline-flex focus-within:bg-transparent hover:bg-transparent hover:text-site-main-color size-10 -left-16" />
-        <CarouselNext className="border border-site-main-color text-site-main-color bg-transparent hidden md:inline-flex focus-within:bg-transparent hover:bg-transparent hover:text-site-main-color size-10 -right-16" />
+        <div className="w-full flex items-center justify-center gap-6 my-4">
+          <CarouselPrevious className="border border-site-main-color text-site-main-color bg-transparent focus-within:bg-transparent hover:bg-transparent hover:text-site-main-color size-10 -left-16 static md:absolute self-center translate-y-0 md:-translate-y-1/2" />
+          <CarouselNext className="border border-site-main-color text-site-main-color bg-transparent focus-within:bg-transparent hover:bg-transparent hover:text-site-main-color size-10 -right-16 static md:absolute self-center translate-y-0 md:-translate-y-1/2" />
+        </div>
       </Carousel>
     </section>
   );

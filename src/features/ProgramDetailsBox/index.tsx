@@ -8,10 +8,11 @@ import Image from "next/image";
 
 export default function ProgramDetailsBox({
   supportImg,
-  description,
+  description, features
 }: {
   supportImg: any;
   description: any;
+  features: any
 }) {
   return (
     <div className="overflow-hidden w-full overflow-y-scroll px-4 lg:px-14 lg:h-[91vh] no-scrollbar mt-8 lg:mt-auto py-8">
@@ -30,6 +31,17 @@ export default function ProgramDetailsBox({
           ))}
         </div>
       )}
+      <div className="flex items-center justify-between px-2 md:px-3 w-full">
+        {features.map((item: any, index: number) => (
+          <div
+            key={index}
+            className="flex flex-col gap-2 items-center text-2xl xlg:text-3xl justify-between text-white capitalize my-6"
+          >
+            <item.icon />
+            <h3 className="text-center text-sm">{item.content}</h3>
+          </div>
+        ))}
+      </div>
       <Accordion
         type="single"
         collapsible
