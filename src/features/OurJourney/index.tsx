@@ -61,7 +61,7 @@ export default function OurJourney() {
         limits of the mind and body, and that&apos;s why Hybrid Lab exists - to
         help others unlock their full potential. <br />
       </p>
-      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm xlg:text-xl font-medium">
+      <p className="text-center lg:text-left text-white tracking-[0.04em] text-sm xlg:text-lg font-medium">
         Together, Zeb and Brett bring a wealth of knowledge and hands-on
         experience, providing a dynamic platform for athletes to push themselves
         across all areas of fitness.

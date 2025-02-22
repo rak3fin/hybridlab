@@ -14,17 +14,17 @@ export default function ChoosePlan() {
     >
       <div className="flex flex-col items-center lg:items-stretch gap-5 lg:gap-8 lg:max-w-lg w-full">
         <CustomHeader whiteHeading="SIGN UP" colourHeading="NOW" />
-        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-lg text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
           rewarding as possible. With our Gold Membership, your commitment to
           health and fitness becomes more effortless than ever.
         </p>
-        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-lg text-center lg:text-left text-white/80">
           Choose between a budget friendly, Monthly billing option of $24.99AUD
           a month or a simple Annual billing cycle of $249.99AUD billed every 12
           months.
         </p>
-        <p className="text-base xlg:text-xl text-center lg:text-left text-white/80">
+        <p className="text-base xlg:text-lg text-center lg:text-left text-white/80">
           At Hybrid Lab we believe in making your fitness journey as smooth and
           rewarding as possible. With our Gold Membership, your commitment to
           health and fitness becomes more effortless than ever.

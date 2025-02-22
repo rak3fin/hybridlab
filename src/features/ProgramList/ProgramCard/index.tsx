@@ -27,7 +27,7 @@ export default function ProgramCard({
       )}
       <div className="flex flex-col lg:flex-row justify-between gap-7 items-center flex-1">
         <div className="flex flex-col gap-7">
-          <h1 className="text-white text-2xl xlg:text-3xl font-semibold font-pilat text-center lg:text-left">
+          <h1 className="text-white text-xl xlg:text-2xl font-semibold font-pilat text-center lg:text-left">
             {title}
           </h1>
           <div className="flex flex-col gap-3 lg:gap-5">

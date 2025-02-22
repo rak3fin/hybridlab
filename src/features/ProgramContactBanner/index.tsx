@@ -10,7 +10,7 @@ export default function ProgramContactBanner() {
           <h1 className="text-2xl font-pilat text-white font-semibold xlg:text-3xl">
             Get Started Today
           </h1>
-          <p className="text-base xlg:text-2xl lg:tracking-[0.04em] text-white/80 text-center lg:text-left lg:max-w-lg">
+          <p className="text-base xlg:text-lg lg:tracking-[0.04em] text-white/80 text-center lg:text-left lg:max-w-lg">
             Transform your approach to fitness with Hybrid Lab. Join us for our
             online programs and begin your journey toward achieving your health
             and fitness goals. We welcome everyone, from beginners to seasoned

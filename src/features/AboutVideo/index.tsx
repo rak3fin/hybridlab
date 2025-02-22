@@ -29,7 +29,7 @@ export default function AboutVideo() {
         <h1 className="text-white font-bold text-lg text-center xlg:text-3xl">
           Hybrid Training : A Balanced Approach to Fitness
         </h1>
-        <p className="text-base text-white/80 text-center xlg:text-xl">
+        <p className="text-base text-white/80 text-center xlg:text-lg">
           Imagine combining the power of weightlifting with the endurance of
           running in a single workout routine. That&apos;s hybrid training—it
           blends strength and cardiovascular exercises to give you the best of
@@ -88,7 +88,7 @@ export default function AboutVideo() {
             </div>
           ))}
         </div>
-        <p className="text-base text-white text-center xlg:text-xl max-w-[90ch] self-center">
+        <p className="text-base text-white text-center xlg:text-lg max-w-[90ch] self-center">
           In essence, hybrid training is about being versatile—keeping your body
           guessing and your mind engaged. It&apos;s ideal for anyone who wants
           to get fit, stay healthy, and have fun doing it.
