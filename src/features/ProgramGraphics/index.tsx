@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import useClickOutSide from "@/hooks/useClickOutSide";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -30,10 +29,10 @@ export default function ProgramGraphics({
   const [videoId, setVideoId] = useState<string>("");
   const playerRef = useClickOutSide(() => setShowVideoModal(false));
 
-  const handelStartVideo = (id: string) => {
-    setVideoId(id);
-    setShowVideoModal(true);
-  };
+  // const handelStartVideo = (id: string) => {
+  //   setVideoId(id);
+  //   setShowVideoModal(true);
+  // };
 
   return (
     <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-8 xl:shrink-0 lg:h-full lg:max-w-[60vmax] overflow-y-hidden">
