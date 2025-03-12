@@ -32,24 +32,8 @@ export default function Homehero() {
           href="#membership"
           className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 xlg:py-6 px-6 lg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
-          Get Started Now
+          Enroll Now
         </Link>
-        <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
-          <Image
-            src="/extra/play-button.png"
-            alt="play"
-            width={210}
-            height={72}
-            className="w-36 lg:w-[11vmax]"
-          />
-          <Image
-            src="/extra/appstore-button.png"
-            alt="play"
-            width={210}
-            height={72}
-            className="w-36 lg:w-[11vmax]"
-          />
-        </div>
       </div>
       <Image
         src="/extra/home-hero-cover.png"

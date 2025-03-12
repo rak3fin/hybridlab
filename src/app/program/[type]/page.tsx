@@ -30,7 +30,7 @@ export default async function ProgramDetails({
     supportImg,
     description,
     paraDescription,
-    features
+    features,
   } = pageData;
 
   return (
@@ -41,9 +41,13 @@ export default async function ProgramDetails({
           subTitle={subTitle}
           subPara={subPara}
           video={video}
+        />
+        <ProgramDetailsBox
+          description={description}
+          supportImg={supportImg}
+          features={features}
           paraDescription={paraDescription}
         />
-        <ProgramDetailsBox description={description} supportImg={supportImg} features={features} />
       </section>
     </MainWebTemplate>
   );

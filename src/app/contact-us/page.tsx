@@ -17,7 +17,7 @@ export default function Contactus() {
         btnPath="#lets-talk"
       />
       <ContactDetails />
-      <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full bg-[#292929] py-12 px-4 lg:px-32">
+      <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between gap-5 md:gap-8 xl:gap-12 w-full bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat py-12 px-4 lg:px-32">
         <div className="inline-flex gap-2 text-white/90 text-base xlg:text-lg">
           <span className="flex items-center justify-center border rounded-full p-4 border-white">
             <FaLocationDot />

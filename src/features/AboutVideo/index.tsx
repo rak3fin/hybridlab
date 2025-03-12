@@ -1,18 +1,18 @@
 "use client";
 import CustomHeader from "@/components/ui/header";
-import useClickOutSide from "@/hooks/useClickOutSide";
+// import useClickOutSide from "@/hooks/useClickOutSide";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function AboutVideo() {
-  const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
-  const [videoId, setVideoId] = useState("");
-  const playerRef = useClickOutSide(() => setShowVideoModal(false));
+  // const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
+  // const [videoId, setVideoId] = useState("");
+  // const playerRef = useClickOutSide(() => setShowVideoModal(false));
 
-  const handelStartVideo = (id: string) => {
-    setVideoId(id);
-    setShowVideoModal(true);
-  };
+  // const handelStartVideo = (id: string) => {
+  //   setVideoId(id);
+  //   setShowVideoModal(true);
+  // };
   return (
     <section className="flex flex-col gap-7 lg:gap-12 mx-4 md:mx-14 xl:mx-28 my-12 lg:my-24 items-center">
       <CustomHeader whiteHeading="ABOUT" colourHeading="HYBRID LAB" />
@@ -38,7 +38,7 @@ export default function AboutVideo() {
           injuring yourself from doing the same thing over and over.
         </p>
       </div>
-      <div className="flex flex-col gap-7 lg:gap-12">
+      {/* <div className="flex flex-col gap-7 lg:gap-12">
         <h1 className="text-white font-bold text-lg text-center xlg:text-3xl">
           Other Videos
         </h1>
@@ -93,8 +93,8 @@ export default function AboutVideo() {
           guessing and your mind engaged. It&apos;s ideal for anyone who wants
           to get fit, stay healthy, and have fun doing it.
         </p>
-      </div>
-      {showVideoModal && (
+      </div> */}
+      {/* {showVideoModal && (
         <div className="fixed top-0 left-0 w-full h-full bg-black/80 z-[1100] flex items-center justify-center overflow-hidden">
           <div
             className={`w-[80vw] h-[33vh] lg:h-[75vh] relative`}
@@ -109,7 +109,7 @@ export default function AboutVideo() {
             ></iframe>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

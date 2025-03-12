@@ -203,7 +203,7 @@ export default function HomeNeutrition() {
               fill="#181818"
             />
           </svg>
-          ask hybrid bot Assistant
+          ask hybrid lab Assistant
         </Link>
       </div>
     </section>

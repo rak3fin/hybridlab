@@ -7,7 +7,7 @@ import { TbShoe } from "react-icons/tb";
 const programData = [
   {
     title: `HYROX COMPETITION TRAINING PROGRAM`,
-    shortTitle: "HYROX PROGRAMS",
+    shortTitle: "HYROX PROGRAM",
     subTitle: `Train Smarter. Race Stronger. Dominate the Competition.`,
     subPara: `Get race-ready with a structured 8 or 12-week training plan designed for peak Hyrox performance!`,
     btnLink: `/program/hyrox-competition-training-program`,
@@ -93,7 +93,7 @@ const programData = [
   },
   {
     title: `STRENGTH & HYPERTROPHY PROGRAM`,
-    shortTitle: "STRENGTH PROGRAMS",
+    shortTitle: "STRENGTH PROGRAM",
     subTitle: `Built for Beginners, Intermediates & Advanced Lifters`,
     subPara: `Develop Strength. Build Muscle. Improve Conditioning.`,
     btnLink: `/program/strength-and-hypertrophy-program`,
@@ -208,7 +208,7 @@ const programData = [
   },
   {
     title: `CALISTHENICS FOUNDATIONS PROGRAM`,
-    shortTitle: "CALISTHENICS PROGRAMS",
+    shortTitle: "CALISTHENICS PROGRAM",
     subTitle: `Master Bodyweight Strength, Control & Mobility`,
     subPara: `Build Strength. Improve Mobility. Unlock Advanced Skills.`,
     btnLink: `/program/calisthenics-foundations-program`,
@@ -276,7 +276,7 @@ const programData = [
   },
   {
     title: `RUNNING PERFORMANCE PROGRAMS`,
-    shortTitle: `RUNNING PROGRAMS`,
+    shortTitle: `RUNNING PROGRAM`,
     subTitle: `Crush Your Next Race - 10K | Half Marathon | Full Marathon`,
     subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/running-performance-programs`,
@@ -421,7 +421,7 @@ const programData = [
   },
   {
     title: `A WOD A DAY`,
-    shortTitle: `CONDITIONING PROGRAM`,
+    shortTitle: `WOD A DAY PROGRAM`,
     subTitle: `A wod a day - Functional Fitness, Every Day`,
     //   subPara: `Run Faster. Go Further. Train Smarter`,
     btnLink: `/program/wod-a-day-conditioning`,

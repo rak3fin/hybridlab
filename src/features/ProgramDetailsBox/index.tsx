@@ -8,11 +8,14 @@ import Image from "next/image";
 
 export default function ProgramDetailsBox({
   supportImg,
-  description, features
+  description,
+  features,
+  paraDescription,
 }: {
   supportImg: any;
   description: any;
-  features: any
+  features: any;
+  paraDescription?: any;
 }) {
   return (
     <div className="overflow-hidden w-full overflow-y-scroll px-4 lg:px-14 lg:h-[91vh] no-scrollbar mt-8 lg:mt-auto py-8">
@@ -31,17 +34,24 @@ export default function ProgramDetailsBox({
           ))}
         </div>
       )}
-      <div className="flex items-center justify-between px-2 md:px-3 w-full">
+      <div className="flex items-center justify-between px-2 md:px-3 w-full my-6">
         {features.map((item: any, index: number) => (
           <div
             key={index}
-            className="flex flex-col gap-2 items-center text-2xl xlg:text-3xl justify-between text-white capitalize my-6"
+            className="flex flex-col gap-2 items-center text-2xl xlg:text-3xl justify-between text-white capitalize"
           >
             <item.icon />
             <h3 className="text-center text-sm">{item.content}</h3>
           </div>
         ))}
       </div>
+      {paraDescription && paraDescription !== "" && (
+        <div className="bg-slate-400 h-0.5 w-full flex flex-1 my-6" />
+      )}
+      <p
+        className="text-sm text-white xlg:text-base"
+        dangerouslySetInnerHTML={{ __html: paraDescription || "" }}
+      />
       <Accordion
         type="single"
         collapsible

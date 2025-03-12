@@ -24,7 +24,7 @@ export default function Calculator({
           value: [Number(height)],
           min: 4.5,
           max: 6.5,
-          step: 0.5,
+          step: 0.1,
           onValueChange: (e: number[]) => setHeight(e[0].toString()),
         }
       : {
@@ -45,7 +45,6 @@ export default function Calculator({
 
   return (
     <div className="flex flex-col gap-10">
-      
       {fillUpComplete ? (
         <>
           <div className="flex gap-6">

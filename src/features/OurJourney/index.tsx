@@ -32,13 +32,13 @@ export default function OurJourney() {
         /> */}
         </div>
         <div className="flex flex-col gap-5 self-center">
-          <CustomHeader whiteHeading="WHO" colourHeading="WE ARE" />
+          <CustomHeader whiteHeading="WHO" colourHeading="ARE WE?" />
           <p className="text-sm xlg:text-base text-center lg:text-left text-white lg:max-w-lg">
             At Hybrid Lab, we&apos;re passionate about helping you Reach Your
             Potential. Founded by Zeb Taia and Brett Stratton, our platform is
             built to push limits and redefine what&apos;s possible in fitness.{" "}
             <br />
-            Zeb Taia; a former professional rugby league player - has spent
+            Zeb Taia, a former professional rugby league player - has spent
             years mastering strength, conditioning, and high-intensity training.
             Now at 40 years old, Zeb continues to challenge himself, pushing the
             boundaries of what&apos;s possible both mentally and physically. A

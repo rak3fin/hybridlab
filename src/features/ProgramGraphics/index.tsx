@@ -17,13 +17,11 @@ export default function ProgramGraphics({
   title,
   subTitle,
   subPara,
-  paraDescription,
 }: {
   video: string[];
   title: string;
   subTitle: string;
   subPara?: string;
-  paraDescription?: string;
 }) {
   // const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
   // const [videoId, setVideoId] = useState<string>("");
@@ -67,9 +65,15 @@ export default function ProgramGraphics({
                     height={80}
                   />
                 </button> */}
-                <video src={item} width={633}
+                <video
+                  src={item}
+                  width={633}
                   height={311}
-                  className="w-full object-cover" autoPlay muted loop></video>
+                  className="w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                ></video>
               </div>
             </CarouselItem>
           ))}
@@ -95,10 +99,7 @@ export default function ProgramGraphics({
             </h4>
           )}
         </div>
-        <p
-          className="text-sm text-white xlg:text-base lg:max-w-[40vmax]"
-          dangerouslySetInnerHTML={{ __html: paraDescription || "" }}
-        />
+
         <Button className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap lg:self-start rounded-none">
           Buy Now
         </Button>
