@@ -1,8 +1,9 @@
 "use client";
+
 import Footer from "@/features/Footer";
 import NavBar from "@/features/NavBar";
 import useElementHeight from "@/hooks/useElementHeight";
-import Image from "next/image";
+import Script from "next/script";
 
 export default function MainWebTemplate({
   children,
@@ -15,10 +16,42 @@ export default function MainWebTemplate({
     <>
       <NavBar ref={navbarRef} />
       <main style={{ marginTop }}>{children}</main>
-      <button type="button" className="fixed bottom-5 right-5">
-        <Image src="/Bot-logo.png" alt="bot" width={76} height={76} className="w-16 lg:w-[4vmax]" />
-      </button>
       <Footer />
+
+      {/* Load widget configuration early */}
+      <Script id="chat-config" strategy="beforeInteractive">
+        {`
+          window.widgetConfig = {
+            apiKey: "24ca729f-d451-48d1-ae10-ab83a2f1d96f",
+            host: "https://chat.yukin.cloud"
+          };
+        `}
+      </Script>
+
+      {/* Load Marked library from CDN */}
+      <Script
+        id="marked-lib"
+        src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+        strategy="beforeInteractive"
+      />
+
+      {/* Load the external widget.js */}
+      <Script
+        id="widget-js"
+        src="https://chat.yukin.cloud/widget.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          // Since widget.js relies on DOMContentLoaded,
+          // we dispatch the event if the document is already loaded.
+          if (document.readyState !== "loading") {
+            const event = new Event("DOMContentLoaded", {
+              bubbles: true,
+              cancelable: true,
+            });
+            document.dispatchEvent(event);
+          }
+        }}
+      />
     </>
   );
 }
