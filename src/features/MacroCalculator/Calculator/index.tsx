@@ -11,13 +11,22 @@ export default function Calculator({
 }: {
   handelClose: () => void;
 }) {
+  // Macro calculator state
   const [gender, setGender] = useState<string>("male");
   const [heightType, setHeightType] = useState<string>("feet");
   const [weightType, setWeightType] = useState<string>("kg");
   const [height, setHeight] = useState<string>("4.5");
   const [weight, setWeight] = useState<string>("60");
+
+  // State to toggle between macro input and contact details
   const [fillUpComplete, setFillUpComplete] = useState<boolean>(false);
 
+  // Contact details state (added)
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+
+  // Configure slider based on the height type
   const heightSlider =
     heightType === "feet"
       ? {
@@ -35,12 +44,40 @@ export default function Calculator({
           onValueChange: (e: number[]) => setHeight(e[0].toString()),
         };
 
-  const handelSubmit = () => {
-    handelClose();
-    toast({
-      title: "Your form has been submitted",
-      description: "You will receive an email from us ASAP.",
-    });
+  // Submission function: POST macro-calculator and contact data to the API endpoint
+  const handelSubmit = async () => {
+    try {
+      const response = await fetch("/api/macro_calculator", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          gender,
+          heightType,
+          weightType,
+          height,
+          weight,
+          name,
+          phone,
+          email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit data");
+      }
+
+      toast({
+        title: "Your form has been submitted",
+        description: "You will receive an email from us ASAP.",
+      });
+      handelClose();
+    } catch (error) {
+      console.log(error)
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your data. Please try again.",
+      });
+    }
   };
 
   return (
@@ -63,16 +100,22 @@ export default function Calculator({
             <input
               type="text"
               placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="text-white/60 text-base tracking-[0.02em] border border-white/30 px-6 py-4 bg-white/10 w-full"
             />
             <input
               type="tel"
               placeholder="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               className="text-white/60 text-base tracking-[0.02em] border border-white/30 px-6 py-4 bg-white/10 w-full"
             />
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="text-white/60 text-base tracking-[0.02em] border border-white/30 px-6 py-4 bg-white/10 w-full"
             />
           </div>
@@ -133,8 +176,6 @@ export default function Calculator({
               <div className="flex gap-2 items-center">
                 <input
                   type="number"
-                  name=""
-                  id=""
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder=""
@@ -172,8 +213,6 @@ export default function Calculator({
               <div className="flex gap-2 items-center">
                 <input
                   type="number"
-                  name=""
-                  id=""
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
                   placeholder=""
@@ -182,7 +221,6 @@ export default function Calculator({
               </div>
             </div>
             <Slider
-              className=""
               min={60}
               max={150}
               value={[parseInt(weight)]}

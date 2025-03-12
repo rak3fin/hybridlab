@@ -1,7 +1,27 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Homehero() {
+  const [enrollUrl, setEnrollUrl] = useState("#membership");
+
+  useEffect(() => {
+    const fetchEnrollUrl = async () => {
+      try {
+        const response = await fetch("/api/enroll-link");
+        const data = await response.json();
+
+        if (data.length > 0 && data[0].url) {
+          setEnrollUrl(data[0].url);
+        }
+      } catch (error) {
+        console.error("Error fetching enroll link:", error);
+      }
+    };
+
+    fetchEnrollUrl();
+  }, []);
   return (
     <div className="bg-[url('/custom-bg/home-hero-bg.png')] bg-cover bg-no-repeat bg-center px-5 md:px-14 xlg:px-28 py-7 flex flex-col lg:flex-row items-center md:gap-20 xlg:gap-40">
       <div className="flex flex-col items-center lg:items-stretch my-4 gap-4 lg:gap-8">
@@ -29,7 +49,7 @@ export default function Homehero() {
           The key to your next level of training found in one app.
         </p>
         <Link
-          href="#membership"
+          href={enrollUrl} target="_blank"
           className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 xlg:py-6 px-6 lg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
         >
           Enroll Now

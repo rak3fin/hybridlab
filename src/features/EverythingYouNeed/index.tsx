@@ -1,3 +1,4 @@
+"use client"
 import {
   Accordion,
   AccordionContent,
@@ -7,8 +8,28 @@ import {
 import CustomHeader from "@/components/ui/header";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function EverythingYouNeed() {
+
+  const [appUrl, setappUrl] = useState("#membership");
+
+  useEffect(() => {
+    const fetchappUrl = async () => {
+      try {
+        const response = await fetch("/api/app-link");
+        const data = await response.json();
+
+        if (data.length > 0 && data[0].url) {
+          setappUrl(data[0].url);
+        }
+      } catch (error) {
+        console.error("Error fetching app link:", error);
+      }
+    };
+
+    fetchappUrl();
+  }, []);
   const membershipDetails = [
     {
       id: 1,
@@ -70,7 +91,7 @@ export default function EverythingYouNeed() {
             ))}
           </Accordion>
           <Link
-            href="#membership"
+            href={appUrl} target="_blank"
             className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-5 xlg:py-6 px-6 xlg:px-7 lg:self-start font-pilat transition-transform hover:scale-[1.05] duration-300"
           >
             Download App

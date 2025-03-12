@@ -3,10 +3,28 @@ import CustomHeader from "@/components/ui/header";
 import { Switch } from "@/components/ui/switch";
 import { Check } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ChoosePlan() {
   const [annually, setAnnually] = useState<boolean>(false);
+  const [enrollUrl, setEnrollUrl] = useState("#membership");
+
+  useEffect(() => {
+    const fetchEnrollUrl = async () => {
+      try {
+        const response = await fetch("/api/enroll-link");
+        const data = await response.json();
+
+        if (data.length > 0 && data[0].url) {
+          setEnrollUrl(data[0].url);
+        }
+      } catch (error) {
+        console.error("Error fetching enroll link:", error);
+      }
+    };
+
+    fetchEnrollUrl();
+  }, []);
   return (
     <section
       className="bg-[url('/custom-bg/choose-plan-bg.png')] bg-cover bg-no-repeat px-4 md:px-14 xl:px-28 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-12 lg:justify-evenly"
@@ -81,10 +99,11 @@ export default function ChoosePlan() {
         <button
           type="button"
           className="bg-white text-[#1e1e1e] font-bold text-xs lg:text-base py-2 md:py-4 xlg:py-6 px-6 lg:px-7 self-center lg:self-stretch font-pilat transition-transform hover:scale-[1.05] duration-300"
+          onClick={() => window.open(enrollUrl, "_blank", "noopener,noreferrer")}
         >
           Enroll Now
         </button>
-      </div>
-    </section>
+      </div>``
+    </section >
   );
 }
