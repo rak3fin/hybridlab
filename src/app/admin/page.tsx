@@ -3,7 +3,6 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import Head from "next/head";
 import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
 
 /* ———————————————————————————————————————————————
    Utility helpers (client-side only)

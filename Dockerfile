@@ -1,34 +1,21 @@
-# Stage 1: Build the Next.js application
-FROM node:18-alpine AS builder
+# Dockerfile.prod
 
-# Set working directory
-WORKDIR /app
-
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
-
-# Copy the rest of the project
-COPY . .
-
-# Build the application
-RUN npm run build
-
-# Stage 2: Run the Next.js production server
+# Use a minimal Node image
 FROM node:18-alpine
 
+# Set working dir
 WORKDIR /app
 
-# Copy package files to install only production dependencies
-COPY package*.json ./
-RUN npm install --production
+# 1) Copy package manifests and install only production deps
+COPY package.json package-lock.json ./
+RUN npm ci --production
 
-# Copy build output and static files from the builder stage
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+# 2) Copy your locally-built Next.js output
+#    (Make sure you've run `npm run build` on your host first!)
+COPY .next ./.next
+COPY public ./public
 
-# Expose the port the app runs on
+
+# 3) Expose & run
 EXPOSE 3000
-
-# Start the application
 CMD ["npm", "start"]

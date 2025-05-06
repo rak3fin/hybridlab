@@ -42,7 +42,7 @@ export default function OnlinePrograms() {
                     {program.shortTitle}
                   </h1>
                   <div className="flex items-center justify-between px-2 md:px-3 w-full">
-                    {(All_Program_Details.features || []).map((item, index) => (
+                  {(program.features ?? []).map((item, index)  => (
                       <div
                         key={index}
                         className="flex flex-col gap-1 items-center text-xl justify-between text-white capitalize"

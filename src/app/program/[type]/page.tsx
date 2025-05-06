@@ -34,22 +34,24 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProgramDetails({
-  params,
-}: {
-  params: { type: string };
-}) {
-  const { type: slug } = await params;
+type Params = Promise<{ type: string }>;
 
+interface ProgramDetailsPageProps {
+  params: Params;
+}
+
+export default async function ProgramDetails(
+  props: ProgramDetailsPageProps
+) {
+  // ✅ First await the promise…
+  const { type: slug } = await props.params;
+
+  // …then continue as usual
   const enriched = await loadProgramData();
-
   const program = enriched.find(
-    (p) => p.btnLink.split("/").pop() === slug
+    (p) => p.btnLink.split('/').pop() === slug
   );
-  
-  if (!program) {
-    notFound();
-  }
+  if (!program) notFound();
 
   const {
     title,
@@ -60,7 +62,7 @@ export default async function ProgramDetails({
     description,
     paraDescription,
     features,
-    trainingLink, 
+    trainingLink,
   } = program;
 
   return (
