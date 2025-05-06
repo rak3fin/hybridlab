@@ -1,27 +1,56 @@
+// app/program/[type]/page.tsx
+import { notFound } from "next/navigation";
 import ProgramDetailsBox from "@/features/ProgramDetailsBox";
 import ProgramGraphics from "@/features/ProgramGraphics";
-import { All_Program_Details } from "@/helpers/programData";
 import MainWebTemplate from "@/templates/MainWebTemplate";
+import { All_Program_Details } from "@/helpers/programData";
 
-export async function generateStaticParams() {
-  return All_Program_Details.map(({ btnLink }) => ({
-    type: btnLink.split("/").pop(),
+const origin =
+  typeof window !== "undefined"
+    ? window.location.origin
+    : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+async function loadProgramData() {
+  const url = new URL("/api/training-program", origin).toString();
+  let linksObj: Record<string, string> = {};
+
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    const arr = await res.json(); // e.g. [{ training_link_1, … }]
+    linksObj = Array.isArray(arr) && arr[0] ? arr[0] : {};
+  } catch (e) {
+    console.error("Error fetching training-program:", e);
+  }
+
+  return All_Program_Details.map((item, idx) => ({
+    ...item,
+    trainingLink: linksObj[`training_link_${idx + 1}`] ?? "",
   }));
 }
 
-function getProgramBySlug(slug: string) {
-  return All_Program_Details.find(
-    ({ btnLink }) => btnLink.split("/").pop() === slug
-  );
+export async function generateStaticParams() {
+  return All_Program_Details.map(({ btnLink }) => ({
+    type: btnLink.split("/").pop() ?? "",
+  }));
 }
 
 export default async function ProgramDetails({
   params,
 }: {
-  params: Promise<{ type: string }>;
+  params: { type: string };
 }) {
-  const { type } = await params;
-  const pageData: any = getProgramBySlug(type);
+  const { type: slug } = await params;
+
+  const enriched = await loadProgramData();
+
+  const program = enriched.find(
+    (p) => p.btnLink.split("/").pop() === slug
+  );
+  
+  if (!program) {
+    notFound();
+  }
+
   const {
     title,
     subTitle,
@@ -31,7 +60,8 @@ export default async function ProgramDetails({
     description,
     paraDescription,
     features,
-  } = pageData;
+    trainingLink, 
+  } = program;
 
   return (
     <MainWebTemplate>
@@ -41,6 +71,7 @@ export default async function ProgramDetails({
           subTitle={subTitle}
           subPara={subPara}
           video={video}
+          trainingLink={trainingLink}
         />
         <ProgramDetailsBox
           description={description}

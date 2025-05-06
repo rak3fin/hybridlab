@@ -3,6 +3,7 @@ import { LiaDumbbellSolid, LiaRunningSolid } from "react-icons/lia";
 import { LuBicepsFlexed } from "react-icons/lu";
 import { IoBodyOutline } from "react-icons/io5";
 import { TbShoe } from "react-icons/tb";
+import { FaRunning } from "react-icons/fa";
 
 const programData = [
   {
@@ -79,17 +80,17 @@ const programData = [
       },
       {
         icon: LiaDumbbellSolid,
-        content: `sprint workouts`,
+        content: `Strength`,
       },
       {
         icon: LuBicepsFlexed,
-        content: `Build Muscle`,
+        content: `Conditioning`,
       },
       {
-        icon: TbShoe,
-        content: `Athletic`,
+        icon: FaRunning,
+        content: `Running`,
       },
-    ],
+    ]
   },
   {
     title: `STRENGTH & HYPERTROPHY PROGRAM`,
@@ -270,7 +271,7 @@ const programData = [
       },
       {
         icon: IoBodyOutline,
-        content: `Fat Loss`,
+        content: `Full body`,
       },
     ],
   },
@@ -356,7 +357,7 @@ const programData = [
         content: `increase speed`,
       },
       {
-        icon: IoBodyOutline,
+        icon: LiaDumbbellSolid,
         content: `Strength`,
       },
     ],

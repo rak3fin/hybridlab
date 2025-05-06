@@ -1,69 +1,125 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FormEvent } from "react";
 import Head from "next/head";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 
+/* ———————————————————————————————————————————————
+   Utility helpers (client-side only)
+——————————————————————————————————————————————— */
+const saveFile = (blob: Blob, filename: string) => {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+};
+
+/* ———————————————————————————————————————————————
+   Component
+——————————————————————————————————————————————— */
 const AdminPanel = () => {
-  // 1. Call hooks unconditionally at the top.
+  /* 1️⃣ ROUTER / MOUNT */
   const pathname = usePathname();
-
-  // Control "mounted" so we can safely check `window` or do other client-only stuff.
   const [mounted, setMounted] = useState(false);
 
-  // Authentication and modal state.
+  /* 2️⃣ AUTH STATE  */
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
   const [authError, setAuthError] = useState("");
-
-  // Admin panel show/hide logic
   const [showModal, setShowModal] = useState(false);
 
-  // Tab state
-  const [activeTab, setActiveTab] = useState<"submitLinks" | "macroData" | "contactUS">(
-    "submitLinks"
-  );
+  /* 3️⃣ TAB & FORM STATE */
+  const [activeTab, setActiveTab] = useState<
+    "submitLinks" | "macroData" | "contactUS"
+  >("submitLinks");
 
-  // Input fields for enroll and app links.
+  // ── Enroll / App ──────────────────────────────
   const [enrollLink, setEnrollLink] = useState("");
   const [appLink, setAppLink] = useState("");
 
-  // Data arrays.
+  // ── Membership ────────────────────────────────
+  const [membershipMonthly, setMembershipMonthly] = useState("");
+  const [membershipAnnual, setMembershipAnnual] = useState("");
+
+  // ── Training Program (6 links) ────────────────
+  const [trainingLinks, setTrainingLinks] = useState<string[]>(
+    Array(6).fill("")
+  );
+
+  /* 4️⃣ DATA TABLES */
   const [macroData, setMacroData] = useState<any[]>([]);
   const [contactData, setContactData] = useState<any[]>([]);
 
-  // Determine if we are on the admin page
   const isAdminPanelPage = pathname === "/admin";
 
-  // 2. useEffect(s) also run unconditionally at the top
+  /* ———————————————————————————————
+     EFFECTS
+  ———————————————————————————————— */
   useEffect(() => {
     setMounted(true);
 
-    // If we’re on the admin page path, show the modal
+    /* auto-show modal only on /admin */
     setShowModal(isAdminPanelPage);
+
+    /* restore session */
+    if (typeof window !== "undefined") {
+      const stored = sessionStorage.getItem("isAdminAuthed");
+      if (stored === "true") {
+        setAuthenticated(true);
+        setShowModal(false);
+      }
+    }
   }, [isAdminPanelPage]);
 
-  // When authenticated, load all data.
+  /* load data once authenticated */
   useEffect(() => {
     if (authenticated) {
-      fetchMacroData();
-      fetchEnrollLink();
-      fetchAppLink();
-      fetchContactData();
+      Promise.all([
+        fetch("/api/macro_calculator").then((r) => r.json()),
+        fetch("/api/contactus").then((r) => r.json()),
+        fetch("/api/enroll-link").then((r) => r.json()),
+        fetch("/api/app-link").then((r) => r.json()),
+        fetch("/api/membership-link").then((r) => r.json()),
+        fetch("/api/training-program").then((r) => r.json()),
+      ]).then(
+        ([
+          macro,
+          contact,
+          enrollArr,
+          appArr,
+          membershipArr,
+          trainingArr,
+        ]) => {
+          setMacroData(macro);
+          setContactData(contact);
+          if (enrollArr[0]) setEnrollLink(enrollArr[0].url);
+          if (appArr[0]) setAppLink(appArr[0].url);
+          if (membershipArr[0]) {
+            setMembershipMonthly(membershipArr[0].monthly);
+            setMembershipAnnual(membershipArr[0].annual);
+          }
+          if (trainingArr[0]) {
+            setTrainingLinks([
+              trainingArr[0].training_link_1,
+              trainingArr[0].training_link_2,
+              trainingArr[0].training_link_3,
+              trainingArr[0].training_link_4,
+              trainingArr[0].training_link_5,
+              trainingArr[0].training_link_6,
+            ]);
+          }
+        }
+      );
     }
   }, [authenticated]);
 
-  // 3. If not mounted, just show a loading fallback (UI-only)
-  if (!mounted) {
-    return (
-      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-        Loading...
-      </div>
-    );
-  }
-
-  // 4. Define all handler functions here (they do not contain hooks, so it’s safe):
-  const handlePasswordSubmit = async (e: React.FormEvent) => {
+  /* ———————————————————————————————
+     AUTH HANDLER
+  ———————————————————————————————— */
+  const handlePasswordSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
       const res = await fetch("/api/admin/validate", {
@@ -75,171 +131,312 @@ const AdminPanel = () => {
       if (data.success) {
         setAuthenticated(true);
         setShowModal(false);
+        sessionStorage.setItem("isAdminAuthed", "true");
       } else {
         setAuthError("Invalid password");
       }
-    } catch (error) {
-        console.log(error)
+    } catch {
       setAuthError("Error validating password");
     }
   };
 
+  /* ———————————————————————————————
+     LINK SUBMISSION
+  ———————————————————————————————— */
   const handleSubmitLinks = async () => {
-    if (enrollLink) {
-      await fetch("/api/enroll-link", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: enrollLink }),
+    try {
+      await Promise.all([
+        fetch("/api/enroll-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: enrollLink }),
+        }),
+        fetch("/api/app-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: appLink }),
+        }),
+        fetch("/api/membership-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            monthly: membershipMonthly,
+            annual: membershipAnnual,
+          }),
+        }),
+        fetch("/api/training-program", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            training_link_1: trainingLinks[0],
+            training_link_2: trainingLinks[1],
+            training_link_3: trainingLinks[2],
+            training_link_4: trainingLinks[3],
+            training_link_5: trainingLinks[4],
+            training_link_6: trainingLinks[5],
+          }),
+        }),
+      ]);
+      alert("Links saved!");
+    } catch (err) {
+      console.error(err);
+      alert("Error saving links");
+    }
+  };
+
+  /* ———————————————————————————————
+     EXPORT HELPERS
+  ———————————————————————————————— */
+  const exportExcel = async (rows: any[], fileName: string) => {
+    const XLSX = await import("xlsx");
+    const ws = XLSX.utils.json_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    const wbout = XLSX.write(wb, { type: "array", bookType: "xlsx" });
+    saveFile(new Blob([wbout]), `${fileName}.xlsx`);
+  };
+
+  const exportPDF = async (rows: any[], columns: string[], fileName: string) => {
+    const jsPDF = (await import("jspdf")).default;
+    const doc = new jsPDF({ orientation: "landscape" });
+    const cellWidth = 290 / columns.length;
+    let y = 20;
+
+    /* headers */
+    columns.forEach((col, i) => {
+      doc.text(col, 10 + i * cellWidth, y);
+    });
+    y += 10;
+
+    /* rows */
+    rows.forEach((row) => {
+      columns.forEach((col, i) => {
+        doc.text(String(row[col]), 10 + i * cellWidth, y);
       });
-    }
-    if (appLink) {
-      await fetch("/api/app-link", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: appLink }),
-      });
-    }
-    // Refetch stored links after submission.
-    fetchEnrollLink();
-    fetchAppLink();
+      y += 8;
+      if (y > 190) {
+        doc.addPage();
+        y = 20;
+      }
+    });
+
+    doc.save(`${fileName}.pdf`);
   };
 
-  const fetchMacroData = async () => {
-    const res = await fetch("/api/macro_calculator");
-    const data = await res.json();
-    setMacroData(data);
-  };
+  /* ———————————————————————————————
+     UI RENDER
+  ———————————————————————————————— */
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        Loading...
+      </div>
+    );
+  }
 
-  const fetchEnrollLink = async () => {
-    const res = await fetch("/api/enroll-link");
-    const data = await res.json();
-    if (Array.isArray(data) && data.length > 0) {
-      setEnrollLink(data[0].url);
-    }
-  };
-
-  const fetchAppLink = async () => {
-    const res = await fetch("/api/app-link");
-    const data = await res.json();
-    if (Array.isArray(data) && data.length > 0) {
-      setAppLink(data[0].url);
-    }
-  };
-
-  const fetchContactData = async () => {
-    const res = await fetch("/api/contactus");
-    const data = await res.json();
-    setContactData(data);
-  };
-
-  // 5. Now render normally, with no more hook calls below this point
   return (
     <>
       <Head>
-        <title>Admin Panel</title>
+        <title>HYBRID Labs Admin</title>
       </Head>
+
+      {/* —————————————————  MAIN  ————————————————— */}
       <div className="bg-gray-900 text-white min-h-screen">
         <div className="container mx-auto py-10 px-4">
-          <h1 className="text-4xl font-bold mb-6">Admin Panel</h1>
+          <h1 className="text-4xl font-bold mb-6">Hybrid Labs Admin Panel</h1>
+
           {authenticated ? (
+            /* ——— Tabs ——— */
             <>
-              {/* Tabs Navigation */}
               <div className="mb-6 border-b border-gray-700">
                 <nav className="flex space-x-4">
-                  <button
-                    className={`px-4 py-2 ${
-                      activeTab === "submitLinks"
-                        ? "border-b-2 border-blue-500"
-                        : "hover:border-b-2 hover:border-gray-500"
-                    }`}
-                    onClick={() => setActiveTab("submitLinks")}
-                  >
-                    Submit Links
-                  </button>
-                  <button
-                    className={`px-4 py-2 ${
-                      activeTab === "macroData"
-                        ? "border-b-2 border-blue-500"
-                        : "hover:border-b-2 hover:border-gray-500"
-                    }`}
-                    onClick={() => setActiveTab("macroData")}
-                  >
-                    Macro Calculator Data
-                  </button>
-                  <button
-                    className={`px-4 py-2 ${
-                      activeTab === "contactUS"
-                        ? "border-b-2 border-blue-500"
-                        : "hover:border-b-2 hover:border-gray-500"
-                    }`}
-                    onClick={() => setActiveTab("contactUS")}
-                  >
-                    Contact US Data
-                  </button>
+                  {(
+                    [
+                      ["submitLinks", "Submit Links"],
+                      ["macroData", "Macro Calculator Data"],
+                      ["contactUS", "Contact US Data"],
+                    ] as const
+                  ).map(([id, label]) => (
+                    <button
+                      key={id}
+                      onClick={() =>
+                        setActiveTab(id as "submitLinks" | "macroData" | "contactUS")
+                      }
+                      className={`px-4 py-2 ${
+                        activeTab === id
+                          ? "border-b-2 border-blue-500"
+                          : "hover:border-b-2 hover:border-gray-500"
+                      }`}
+                    >
+                      {label}
+                    </button>
+                  ))}
                 </nav>
               </div>
-              {/* Tab Content */}
+
+              {/* ——— Submit Links ——— */}
               {activeTab === "submitLinks" && (
-                <div>
-                  <h2 className="text-2xl font-semibold mb-4">Submit Links</h2>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block mb-1">Enroll Link</label>
-                      <input
-                        type="text"
-                        placeholder="Enter enroll link"
-                        value={enrollLink}
-                        onChange={(e) => setEnrollLink(e.target.value)}
-                        className="w-full p-2 rounded bg-gray-800 border border-gray-700"
-                      />
+                <div className="space-y-6">
+                  {/* Enroll & App */}
+                  <fieldset className="border border-gray-700 p-4 rounded">
+                    <legend className="px-2 text-lg">Website Links</legend>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block mb-1">Enroll Link</label>
+                        <input
+                          className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                          value={enrollLink}
+                          onChange={(e) => setEnrollLink(e.target.value)}
+                          placeholder="https://…"
+                        />
+                      </div>
+                      <div>
+                        <label className="block mb-1">App Link</label>
+                        <input
+                          className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                          value={appLink}
+                          onChange={(e) => setAppLink(e.target.value)}
+                          placeholder="https://…"
+                        />
+                      </div>
                     </div>
-                    <div>
-                      <label className="block mb-1">App Link</label>
-                      <input
-                        type="text"
-                        placeholder="Enter app link"
-                        value={appLink}
-                        onChange={(e) => setAppLink(e.target.value)}
-                        className="w-full p-2 rounded bg-gray-800 border border-gray-700"
-                      />
+                  </fieldset>
+
+                  {/* Membership */}
+                  <fieldset className="border border-gray-700 p-4 rounded">
+                    <legend className="px-2 text-lg">Membership Links</legend>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block mb-1">Monthly Membership</label>
+                        <input
+                          className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                          value={membershipMonthly}
+                          onChange={(e) => setMembershipMonthly(e.target.value)}
+                          placeholder="https://…"
+                        />
+                      </div>
+                      <div>
+                        <label className="block mb-1">Annual Membership</label>
+                        <input
+                          className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                          value={membershipAnnual}
+                          onChange={(e) => setMembershipAnnual(e.target.value)}
+                          placeholder="https://…"
+                        />
+                      </div>
                     </div>
-                    <button
-                      className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded"
-                      onClick={handleSubmitLinks}
-                    >
-                      Submit Links
-                    </button>
-                  </div>
+                  </fieldset>
+
+                  {/* Training Program (6) */}
+                  <fieldset className="border border-gray-700 p-4 rounded">
+                    <legend className="px-2 text-lg">Training Program Links</legend>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {trainingLinks.map((link, idx) => (
+                        <div key={idx}>
+                          <label className="block mb-1">
+                            Training Link {idx + 1}
+                          </label>
+                          <input
+                            className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                            value={link}
+                            onChange={(e) =>
+                              setTrainingLinks((prev) => {
+                                const next = [...prev];
+                                next[idx] = e.target.value;
+                                return next;
+                              })
+                            }
+                            placeholder="https://…"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </fieldset>
+
+                  <button
+                    onClick={handleSubmitLinks}
+                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded"
+                  >
+                    Save All Links
+                  </button>
                 </div>
               )}
+
+              {/* ——— Macro Table ——— */}
               {activeTab === "macroData" && (
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4">Macro Calculator Data</h2>
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Macro Calculator Data
+                  </h2>
+
+                  {/* download bar */}
+                  <div className="flex gap-4 mb-4">
+                    <button
+                      onClick={() => exportExcel(macroData, "macro_calculator")}
+                      className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded"
+                    >
+                      Download Excel
+                    </button>
+                    <button
+                      onClick={() =>
+                        exportPDF(
+                          macroData,
+                          [
+                            "gender",
+                            "heightType",
+                            "weightType",
+                            "height",
+                            "weight",
+                            "name",
+                            "phone",
+                            "email",
+                          ],
+                          "macro_calculator"
+                        )
+                      }
+                      className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded"
+                    >
+                      Download PDF
+                    </button>
+                  </div>
+
                   <div className="overflow-x-auto">
                     <table className="min-w-full text-sm border-collapse">
                       <thead>
                         <tr className="border-b border-gray-700">
-                          <th className="px-4 py-2">Gender</th>
-                          <th className="px-4 py-2">Height Type</th>
-                          <th className="px-4 py-2">Weight Type</th>
-                          <th className="px-4 py-2">Height</th>
-                          <th className="px-4 py-2">Weight</th>
-                          <th className="px-4 py-2">Name</th>
-                          <th className="px-4 py-2">Phone</th>
-                          <th className="px-4 py-2">Email</th>
+                          {[
+                            "Gender",
+                            "Height Type",
+                            "Weight Type",
+                            "Height",
+                            "Weight",
+                            "Name",
+                            "Phone",
+                            "Email",
+                          ].map((h) => (
+                            <th key={h} className="px-4 py-2">
+                              {h}
+                            </th>
+                          ))}
                         </tr>
                       </thead>
                       <tbody>
-                        {macroData.map((item, index) => (
-                          <tr key={index} className="border-b border-gray-700">
-                            <td className="px-4 py-2">{item.gender}</td>
-                            <td className="px-4 py-2">{item.heightType}</td>
-                            <td className="px-4 py-2">{item.weightType}</td>
-                            <td className="px-4 py-2">{item.height}</td>
-                            <td className="px-4 py-2">{item.weight}</td>
-                            <td className="px-4 py-2">{item.name}</td>
-                            <td className="px-4 py-2">{item.phone}</td>
-                            <td className="px-4 py-2">{item.email}</td>
+                        {macroData.map((row, i) => (
+                          <tr key={i} className="border-b border-gray-700">
+                            {[
+                              row.gender,
+                              row.heightType,
+                              row.weightType,
+                              row.height,
+                              row.weight,
+                              row.name,
+                              row.phone,
+                              row.email,
+                            ].map((cell, j) => (
+                              <td key={j} className="px-4 py-2">
+                                {cell}
+                              </td>
+                            ))}
                           </tr>
                         ))}
                       </tbody>
@@ -247,28 +444,67 @@ const AdminPanel = () => {
                   </div>
                 </div>
               )}
+
+              {/* ——— Contact Table ——— */}
               {activeTab === "contactUS" && (
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4">Contact US Data</h2>
+                  <h2 className="text-2xl font-semibold mb-4">
+                    Contact US Data
+                  </h2>
+
+                  {/* download bar */}
+                  <div className="flex gap-4 mb-4">
+                    <button
+                      onClick={() => exportExcel(contactData, "contact_us")}
+                      className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded"
+                    >
+                      Download Excel
+                    </button>
+                    <button
+                      onClick={() =>
+                        exportPDF(
+                          contactData,
+                          ["firstName", "lastName", "phone", "email", "message"],
+                          "contact_us"
+                        )
+                      }
+                      className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded"
+                    >
+                      Download PDF
+                    </button>
+                  </div>
+
                   <div className="overflow-x-auto">
                     <table className="min-w-full text-sm border-collapse">
                       <thead>
                         <tr className="border-b border-gray-700">
-                          <th className="px-4 py-2">First Name</th>
-                          <th className="px-4 py-2">Last Name</th>
-                          <th className="px-4 py-2">Phone</th>
-                          <th className="px-4 py-2">Email</th>
-                          <th className="px-4 py-2">Message</th>
+                          {[
+                            "First Name",
+                            "Last Name",
+                            "Phone",
+                            "Email",
+                            "Message",
+                          ].map((h) => (
+                            <th key={h} className="px-4 py-2">
+                              {h}
+                            </th>
+                          ))}
                         </tr>
                       </thead>
                       <tbody>
-                        {contactData.map((item, index) => (
-                          <tr key={index} className="border-b border-gray-700">
-                            <td className="px-4 py-2">{item.firstName}</td>
-                            <td className="px-4 py-2">{item.lastName}</td>
-                            <td className="px-4 py-2">{item.phone}</td>
-                            <td className="px-4 py-2">{item.email}</td>
-                            <td className="px-4 py-2">{item.message}</td>
+                        {contactData.map((row, i) => (
+                          <tr key={i} className="border-b border-gray-700">
+                            {[
+                              row.firstName,
+                              row.lastName,
+                              row.phone,
+                              row.email,
+                              row.message,
+                            ].map((cell, j) => (
+                              <td key={j} className="px-4 py-2">
+                                {cell}
+                              </td>
+                            ))}
                           </tr>
                         ))}
                       </tbody>
@@ -282,40 +518,32 @@ const AdminPanel = () => {
           )}
         </div>
 
-        {/* Tailwind Modal for Admin Login */}
-        <div
-          className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity ${
-            isAdminPanelPage && showModal ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-        >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="bg-gray-800 text-white rounded-lg p-6 z-10 w-11/12 max-w-md">
-            <h2 className="text-xl font-bold mb-4">Admin Login</h2>
-            <form onSubmit={handlePasswordSubmit}>
-              <div className="mb-4">
-                <label htmlFor="adminPassword" className="block mb-1">
-                  Password
-                </label>
+        {/* ——— Login Modal ——— */}
+        {isAdminPanelPage && showModal && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="bg-gray-800 text-white rounded-lg p-6 z-10 w-11/12 max-w-md">
+              <h2 className="text-xl font-bold mb-4">Admin Login</h2>
+              <form onSubmit={handlePasswordSubmit}>
+                <label className="block mb-2">Password</label>
                 <input
                   type="password"
-                  id="adminPassword"
-                  placeholder="Enter admin password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  className="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"
                   required
-                  className="w-full p-2 rounded bg-gray-700 border border-gray-600"
                 />
-              </div>
-              {authError && <p className="text-red-500 mb-2">{authError}</p>}
-              <button
-                type="submit"
-                className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded"
-              >
-                Login
-              </button>
-            </form>
+                {authError && <p className="text-red-500 mb-2">{authError}</p>}
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

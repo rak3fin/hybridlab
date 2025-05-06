@@ -17,11 +17,13 @@ export default function ProgramGraphics({
   title,
   subTitle,
   subPara,
+  trainingLink
 }: {
   video: string[];
   title: string;
   subTitle: string;
   subPara?: string;
+  trainingLink?: string;
 }) {
   // const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
   // const [videoId, setVideoId] = useState<string>("");
@@ -31,7 +33,6 @@ export default function ProgramGraphics({
   //   setVideoId(id);
   //   setShowVideoModal(true);
   // };
-
   return (
     <section className="flex-col flex items-center lg:items-stretch gap-6 bg-[#333535] px-4 md:px-12 xl:px-24 py-8 xl:shrink-0 lg:h-full lg:max-w-[60vmax] overflow-y-hidden">
       <Link
@@ -100,7 +101,10 @@ export default function ProgramGraphics({
           )}
         </div>
 
-        <Button className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap lg:self-start rounded-none">
+        <Button className="bg-site-main-color text-[#1e1e1e] font-bold text-xs lg:text-base py-2 lg:py-6 px-6 lg:px-8 font-pilat capitalize transition-transform hover:scale-[1.05] duration-300 text-center whitespace-nowrap lg:self-start rounded-none"
+          onClick={() =>
+            window.open(trainingLink, "_blank", "noopener,noreferrer")}
+        >
           Buy Now
         </Button>
       </div>
@@ -120,6 +124,6 @@ export default function ProgramGraphics({
           </div>
         </div>
       )} */}
-    </section>
+    </section >
   );
 }

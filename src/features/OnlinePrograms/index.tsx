@@ -10,7 +10,10 @@ import { All_Program_Details } from "@/helpers/programData";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function OnlinePrograms() {
+ 
+
   return (
     <section className="bg-[#181818] flex flex-col px-4 md:px-14 xl:px-28 py-7 lg:py-24 items-center gap-7 lg:gap-12">
       <CustomHeader whiteHeading="ONLINE" colourHeading="PROGRAMS" />
@@ -39,7 +42,7 @@ export default function OnlinePrograms() {
                     {program.shortTitle}
                   </h1>
                   <div className="flex items-center justify-between px-2 md:px-3 w-full">
-                    {program.features.map((item, index) => (
+                    {(All_Program_Details.features || []).map((item, index) => (
                       <div
                         key={index}
                         className="flex flex-col gap-1 items-center text-xl justify-between text-white capitalize"
@@ -62,3 +65,4 @@ export default function OnlinePrograms() {
     </section>
   );
 }
+
