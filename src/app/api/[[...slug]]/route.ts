@@ -18,15 +18,15 @@ if (!mongoose.connection.readyState) {
 /* ------------------------------------------------------------------ */
 /* 2) Schemas & Models                                                */
 /* ------------------------------------------------------------------ */
-const opt = { timestamps: true };        // add createdAt / updatedAt
+const opt = { timestamps: true };   // adds createdAt / updatedAt
 
-// “log” collections – multiple documents are allowed
+// “log” collections – many docs allowed
 const contactSchema        = new Schema({ firstName:String,lastName:String,phone:String,email:String,message:String }, opt);
 const macroCalculatorSchema= new Schema({ gender:String,heightType:String,weightType:String,height:String,weight:String,name:String,phone:String,email:String }, opt);
 export const ContactUs        = models.ContactUs        || model('ContactUs',        contactSchema);
 export const MacroCalculator  = models.MacroCalculator  || model('MacroCalculator',  macroCalculatorSchema);
 
-// “singleton” collections – only ONE document should exist
+// “link” collections – we care only about the latest doc
 const enrollLinkSchema     = new Schema({ url:String }, opt);
 const appLinkSchema        = new Schema({ url:String }, opt);
 const membershipLinkSchema = new Schema({ monthly:String, annual:String }, opt);
@@ -39,23 +39,22 @@ const trainingProgramSchema= new Schema({
   training_link_6:{type:String,required:true},
 }, opt);
 
-export const EnrollLink     = models.EnrollLink     || model('EnrollLink',     enrollLinkSchema);
-export const AppLink        = models.AppLink        || model('AppLink',        appLinkSchema);
-export const MembershipLink = models.MembershipLink || model('MembershipLink', membershipLinkSchema);
-export const TrainingProgram= models.TrainingProgram|| model('TrainingProgram',trainingProgramSchema);
+export const EnrollLink      = models.EnrollLink      || model('EnrollLink',      enrollLinkSchema);
+export const AppLink         = models.AppLink         || model('AppLink',         appLinkSchema);
+export const MembershipLink  = models.MembershipLink  || model('MembershipLink',  membershipLinkSchema);
+export const TrainingProgram = models.TrainingProgram || model('TrainingProgram', trainingProgramSchema);
 
 /* ------------------------------------------------------------------ */
 /* 3) Helpers                                                         */
 /* ------------------------------------------------------------------ */
-// → “contactus”, “membership-link”, “training-program”, “admin/validate”, …
 function getEndpoint(url: string): string {
   const parts = new URL(url).pathname.split('/').filter(Boolean);
-  return parts.slice(1).join('/');             // drop the leading “api”
+  return parts.slice(1).join('/');          // drop “api”
 }
 
-// Shorthand for “singleton” collections
-async function getSingleton(Model: mongoose.Model<any>) {
-  return Model.findOne({}).lean();
+// RETURN THE *LATEST* record (updatedAt desc → createdAt desc fallback)
+async function getLatest(Model: mongoose.Model<any>) {
+  return Model.findOne({}).sort({ updatedAt: -1, createdAt: -1 }).lean();
 }
 async function upsertSingleton(Model: mongoose.Model<any>, data: any) {
   return Model.findOneAndUpdate({}, data, { new:true, upsert:true, setDefaultsOnInsert:true });
@@ -73,11 +72,11 @@ export async function GET(request: Request) {
       case 'contactus':         return NextResponse.json(await ContactUs.find({}));
       case 'macro_calculator':  return NextResponse.json(await MacroCalculator.find({}));
 
-      /* ---------- singleton collections ---------- */
-      case 'enroll-link':       return NextResponse.json(await getSingleton(EnrollLink)     ?? {});
-      case 'app-link':          return NextResponse.json(await getSingleton(AppLink)        ?? {});
-      case 'membership-link':   return NextResponse.json(await getSingleton(MembershipLink) ?? {});
-      case 'training-program':  return NextResponse.json(await getSingleton(TrainingProgram)?? {});
+      /* ---------- link collections (latest doc) ---------- */
+      case 'enroll-link':       return NextResponse.json(await getLatest(EnrollLink)      ?? {});
+      case 'app-link':          return NextResponse.json(await getLatest(AppLink)         ?? {});
+      case 'membership-link':   return NextResponse.json(await getLatest(MembershipLink)  ?? {});
+      case 'training-program':  return NextResponse.json(await getLatest(TrainingProgram) ?? {});
 
       /* ---------- misc ---------- */
       case 'admin/validate':
@@ -116,7 +115,7 @@ export async function POST(request: Request) {
                                       { message:'Macro saved', data:await MacroCalculator.create(body) },
                                       { status:201 });
 
-    /* ---------- singleton collections (update or insert) ---------- */
+    /* ---------- link collections (update or insert) ---------- */
     if (ep === 'enroll-link')      return NextResponse.json(
                                       { message:'Enroll link saved', data:await upsertSingleton(EnrollLink, body) },
                                       { status:201 });
